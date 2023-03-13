@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+// 使用カラー
+$color-base: #f8f5e4;
+$color-main: #242e68;
+$color-accent: #539165;
+
+body {
+  background-color: $color-base;
+  color: $color-main;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  li {
+    display: inline-block;
+  }
+}
+
+// ハンバーガーメニュー
+$button-size: 50px;
+$button_span-width: $button-size * 0.6;
+$button_span-height: 2px;
+$button_span-gap: 8px;
+$button-padding: $button-size - $button_span-height * 3 - $button_span-gap * 2;
+
+.hamburgermenu {
+  position: relative;
+  width: $button-size;
+  height: $button-size;
+  margin: 8px;
+  background-color: $color-accent;
+  border-radius: $button-size * 0.1;
+
+  span {
+    position: absolute;
+    left: ($button-size - $button_span-width) * 0.5;
+    width: $button_span-width;
+    height: $button_span-height;
+    background-color: $color-base;
+    border-radius: $button_span-height * 1;
+    transition: ease 0.4s; /*ハンバーガーメニュークリック時の三本線の動きを遅延*/
+  }
+  span:nth-of-type(1) {
+    top: $button-padding * 0.5;
+  }
+
+  span:nth-of-type(2) {
+    top: $button-padding * 0.5 + $button_span-height + $button_span-gap;
+  }
+
+  span:nth-of-type(3) {
+    top: $button-padding * 0.5 + $button_span-height * 2 + $button_span-gap * 2;
+  }
+}
+
+// 動作後のスタイル
+.hamburgermenu.active {
+  // transform: translateX(0);
+
+  span:nth-of-type(1) {
+    top: $button-size * 0.5;
+    transform: rotate(45deg);
+  }
+
+  span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  span:nth-of-type(3) {
+    top: $button-size * 0.5;
+    transform: rotate(-45deg);
+  }
+}
