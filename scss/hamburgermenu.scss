@@ -1,0 +1,156 @@
+@charset "utf-8";
+@use "style";
+
+// 変数定義
+$button-size: 50px;
+$button_span-width: $button-size * 0.6;
+$button_span-height: 3px;
+$button_span-gap: 8px;
+
+// 共通スタイル
+.btn {
+  position: relative;
+  width: $button-size;
+  height: $button-size;
+  margin: 8px;
+  background-color: style.$color-accent;
+  border-radius: $button-size * 0.1;
+  // span {
+  //   position: absolute;
+  //   left: ($button-size - $button_span-width) * 0.5;
+  //   width: $button_span-width;
+  //   height: $button_span-height;
+  //   background-color: style.$color-base;
+  //   border-radius: $button_span-height;
+  //   transition: ease 0.4s; /*クリック時の動きを遅延*/
+  // }
+}
+
+// 3本線から✗に変化するボタン-1
+.btn_3x {
+  span {
+    position: absolute;
+    left: ($button-size - $button_span-width) * 0.5;
+    width: $button_span-width;
+    height: $button_span-height;
+    background-color: style.$color-base;
+    border-radius: $button_span-height;
+    transition: ease 0.4s; /*クリック時の動きを遅延*/
+  }
+  span:nth-of-type(1) {
+    top: ($button-size - $button_span-height * 3 - $button_span-gap * 2) * 0.5;
+  }
+  span:nth-of-type(2) {
+    top: (($button-size - $button_span-height * 3 - $button_span-gap * 2) * 0.5) +
+      $button_span-height + $button_span-gap;
+  }
+  span:nth-of-type(3) {
+    top: (($button-size - $button_span-height * 3 - $button_span-gap * 2) * 0.5) +
+      $button_span-height * 2 + $button_span-gap * 2;
+  }
+}
+// 動作後のスタイル
+.btn_3x.active {
+  span:nth-of-type(1) {
+    top: $button-size * 0.5;
+    transform: rotate(45deg);
+  }
+  span:nth-of-type(2) {
+    opacity: 0;
+  }
+  span:nth-of-type(3) {
+    top: $button-size * 0.5;
+    transform: rotate(-45deg);
+  }
+}
+
+// 3本線から✗に変化するボタン-2
+// 動作後のスタイル
+.btn_3x_2.active {
+  span:nth-of-type(1) {
+    top: $button-size * 0.5;
+    transform: rotate(45deg);
+  }
+  span:nth-of-type(2) {
+    transform: translateX(-$button_span-width);
+    opacity: 0;
+  }
+  span:nth-of-type(3) {
+    top: $button-size * 0.5;
+    transform: rotate(-45deg);
+  }
+}
+
+// 2本線から✗に変化するボタン
+.btn_2x {
+  span {
+    position: absolute;
+    left: ($button-size - $button_span-width) * 0.5;
+    width: $button_span-width;
+    height: $button_span-height;
+    background-color: style.$color-base;
+    border-radius: $button_span-height;
+    transition: ease 0.4s; /*クリック時の動きを遅延*/
+  }
+  span:nth-of-type(1) {
+    top: ($button-size - $button_span-height * 2 - $button_span-gap) * 0.5;
+  }
+  span:nth-of-type(2) {
+    top: ($button-size - $button_span-height * 2 - $button_span-gap) * 0.5 +
+      $button_span-height + $button_span-gap;
+  }
+}
+// 動作後のスタイル
+.btn_2x.active {
+  span:nth-of-type(1) {
+    top: $button-size * 0.5;
+    transform: rotate(45deg);
+  }
+  span:nth-of-type(2) {
+    top: $button-size * 0.5;
+    transform: rotate(-45deg);
+  }
+}
+
+// MENUから✗に変化
+.btn_mx {
+  span {
+    position: absolute;
+    left: ($button-size - $button_span-width) * 0.5;
+    transition: ease 0.4s; /*クリック時の動きを遅延*/
+  }
+  span:nth-of-type(1),
+  span:nth-of-type(3) {
+    width: $button_span-width;
+    height: $button_span-height;
+    background-color: style.$color-base;
+    border-radius: $button_span-height;
+  }
+  span:nth-of-type(1) {
+    top: ($button-size - $button_span-height * 3 - $button_span-gap * 2) * 0.5;
+  }
+  span:nth-of-type(2) {
+    color: style.$color-base;
+    top: $button-size * 0.5 - 6px;
+    font-size: 6px;
+    text-transform: uppercase;
+  }
+  span:nth-of-type(3) {
+    top: (($button-size - $button_span-height * 3 - $button_span-gap * 2) * 0.5) +
+      $button_span-height * 2 + $button_span-gap * 2;
+  }
+}
+// 動作後のスタイル
+.btn_mx.active {
+  span:nth-of-type(1) {
+    top: $button-size * 0.5;
+    transform: rotate(45deg);
+  }
+  span:nth-of-type(2) {
+    opacity: 0;
+  }
+  span:nth-of-type(3) {
+    top: $button-size * 0.5;
+    transform: rotate(-45deg);
+  }
+}

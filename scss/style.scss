@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+// 使用カラー
+$color-base: #f8f5e4;
+$color-main: #242e68;
+$color-accent: #539165;
+
+body {
+  background-color: $color-base;
+  color: $color-main;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  li {
+    display: inline-block;
+  }
+}
