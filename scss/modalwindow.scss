@@ -1,0 +1,20 @@
+@charset "utf-8";
+@use "style";
+
+// 変数定義
+
+.link_login {
+  border: solid 1px style.$color-main;
+  border-radius: 5px;
+}
+
+.hide {
+  // display: none;
+}
+
+.window_login {
+  width: 240px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+}
