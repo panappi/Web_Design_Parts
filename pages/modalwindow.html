@@ -8,27 +8,29 @@
     <link rel="stylesheet" href="../css/libs/reset.css" />
     <link rel="stylesheet" href="../css/modalwindow.css" />
   </head>
-  <body>
-    <header>
-      <main>
-        <h2>モーダルウィンドウ</h2>
-        <div>
-          <h3>リンクを押すと表示れるウィンドウ</h3>
-          <a href="#login" class="link_login">リンク</a>
-        </div>
-        <section id="login" class="hide window_login">
-          <p>ログインが必要です。</p>
-          <button>ログイン</button>
-          <button>新規会員登録</button><br />
-          <button>キャンセル</button>
-        </section>
-        <div>
-          <h3>選択しないと消せないウィンドウ</h3>
-          <p>ページを開くと同時に表示される</p>
-          <button>ボタン</button>
-        </div>
-        <a href="../index.html">ホームに戻る</a>
-      </main>
-    </header>
+  <body id="body">
+    <header></header>
+    <main>
+      <h2>モーダルウィンドウ</h2>
+      <div>
+        <h3>リンクを押すと表示れるウィンドウ</h3>
+        <a href="#window_login" id="link_login" class="link_login">リンク</a>
+      </div>
+      <section id="window_login" class="hide window_login">
+        <p>ログインが必要です。</p>
+        <button>ログイン</button>
+        <button>新規会員登録</button><br />
+        <button id="window_login_cancel">キャンセル</button>
+      </section>
+      <div>
+        <h3>選択しないと消せないウィンドウ</h3>
+        <p>ページを開くと同時に表示される</p>
+        <button>ボタン</button>
+      </div>
+      <a href="../index.html">ホームに戻る</a>
+    </main>
+    <footer></footer>
+    <div id="grayout" class="hide grayout"></div>
+    <script src="../js/modalwindow.js"></script>
   </body>
 </html>
