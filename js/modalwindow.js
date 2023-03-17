@@ -1,19 +1,23 @@
-// リンクを押すと表示れるウィンドウ
-const link_login = document.getElementById("link_login");
-const window_login = document.getElementById("window_login");
-const window_login_cancel = document.getElementById("window_login_cancel");
-const grayout = document.getElementById("grayout");
+// ダイアログウィンドウ
 const body = document.getElementById("body");
-// リンクが押されたらウィンドウとグレーアウトからhideクラスを削除する
-link_login.addEventListener("click", function () {
-  window_login.classList.remove("hide");
-  grayout.classList.remove("hide");
+const grayout = document.getElementById("grayout");
+const windowDialog = document.getElementById("window_dialog");
+const btn1 = document.getElementById("btn-1");
+const btn2 = document.getElementById("btn-2");
+const btn3 = document.getElementById("btn-3");
+
+const openModal = () => {
+  windowDialog.showModal();
   body.classList.add("scroll-off");
-});
-// ウィンドウ内のキャンセルボタンが押されたら
-// ウィンドウとグレーアウトにhideクラスを追加する
-window_login_cancel.addEventListener("click", function () {
-  window_login.classList.add("hide");
-  grayout.classList.add("hide");
+  grayout.classList.remove("hide");
+};
+const closeModal = () => {
+  windowDialog.close();
   body.classList.remove("scroll-off");
-});
+  grayout.classList.add("hide");
+};
+
+btn1.addEventListener("click", () => openModal());
+btn2.addEventListener("click", () => closeModal());
+btn3.addEventListener("click", () => closeModal());
+grayout.addEventListener("click", () => closeModal());

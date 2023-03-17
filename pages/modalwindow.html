@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Modal window</title>
     <link rel="stylesheet" href="../css/libs/reset.css" />
     <link rel="stylesheet" href="../css/modalwindow.css" />
   </head>
@@ -12,21 +12,17 @@
     <header></header>
     <main>
       <h2>モーダルウィンドウ</h2>
-      <div>
-        <h3>リンクを押すと表示れるウィンドウ</h3>
-        <a href="#window_login" id="link_login" class="link_login">リンク</a>
-      </div>
-      <section id="window_login" class="hide window_login">
-        <p>ログインが必要です。</p>
-        <button>ログイン</button>
-        <button>新規会員登録</button><br />
-        <button id="window_login_cancel">キャンセル</button>
-      </section>
-      <div>
-        <h3>選択しないと消せないウィンドウ</h3>
-        <p>ページを開くと同時に表示される</p>
-        <button>ボタン</button>
-      </div>
+      <h3>リンクを開くと表示されるウィンドウ</h3>
+      <a href="./modalwindow_2.html" id="link_login" class="link_login"
+        >リンク</a
+      >
+      <h3>ボタンを押すと表示されるウィンドウ</h3>
+      <button id="btn-1" class="btn-1">ボタン</button><br />
+      <dialog id="window_dialog" class="window_dialog">
+        <p>ここに質問を表示します。</p>
+        <button id="btn-2">はい</button>
+        <button id="btn-3">いいえ</button>
+      </dialog>
       <a href="../index.html">ホームに戻る</a>
     </main>
     <footer></footer>
