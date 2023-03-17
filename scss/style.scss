@@ -6,6 +6,7 @@ $color-main: #242e68;
 $color-accent: #539165;
 
 body {
+  padding: 4%;
   background-color: $color-base;
   color: $color-main;
 }
@@ -16,4 +17,8 @@ header {
   li {
     display: inline-block;
   }
+}
+
+a {
+  border-bottom: solid 1px $color-main;
 }
