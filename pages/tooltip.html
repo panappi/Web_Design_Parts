@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip</title>
+    <link rel="stylesheet" href="../css/libs/reset.css" />
+    <link rel="stylesheet" href="../css/tooltip.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h2>ツールチップ</h2>
+      <div>
+        <h3>●title属性を使用</h3>
+        <a href="../index.html" title="別タブで開きます" target="_blank"
+          >ホームに戻る</a
+        >
+      </div>
+      <div>
+        <h3>●カスタムデータ属性を使用 ふわっと表示</h3>
+        <span class="tooltip" data-tooltip="吹き出しの形も自由に変えられます"
+          >ツールチップ実装</span
+        >
+      </div>
+      <div>
+        <h3>●テキストとツールチップを別要素で管理</h3>
+        <div class="tooltip1">
+          <p>テキスト</p>
+          <div class="description1">説明を入力してください。</div>
+        </div>
+      </div>
+
+      <a href="../index.html">ホームに戻る</a>
+    </main>
+    <footer></footer>
+    <script src="../js/tooltip.js"></script>
+  </body>
+</html>
