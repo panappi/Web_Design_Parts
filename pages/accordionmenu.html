@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion menu</title>
+    <link rel="stylesheet" href="../css/libs/reset.css" />
+    <link rel="stylesheet" href="../css/accordionmenu.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h2>アコーディオンメニュー</h2>
+      <div>
+        <h3>●cssのみで実装</h3>
+        <div class="menu">
+          <input type="checkbox" id="type01" />
+          <label for="type01">▼ アコーディオンメニュー ①</label>
+          <ul id="links01">
+            <li>・ここに内容が入ります。</li>
+          </ul>
+          <input type="checkbox" id="type02" />
+          <label for="type02">▼ アコーディオンメニュー ②</label>
+          <ul id="links02">
+            <li>・ここに内容が入ります。</li>
+          </ul>
+          <input type="checkbox" id="type03" />
+          <label for="type03">▼ アコーディオンメニュー ③</label>
+          <ul id="links03">
+            <li>・ここに内容が入ります。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu-2">
+        <h3>●css・jsで実装</h3>
+        <ul class="include-accordion scroll-control">
+          <li>
+            <button class="accordionBtn" type="button">Menu-1</button>
+            <ul>
+              <li>List 1-1</li>
+              <li>List 1-2</li>
+              <li>List 1-3</li>
+            </ul>
+          </li>
+          <li>
+            <button class="accordionBtn" type="button">Menu-2</button>
+            <ul>
+              <li>List 2-1</li>
+              <li>List 2-2</li>
+              <li>List 2-3</li>
+            </ul>
+          </li>
+          <li>
+            <button class="accordionBtn" type="button">Menu-3</button>
+            <ul>
+              <li>List 3-1</li>
+              <li>List 3-2</li>
+              <li>List 3-3</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <a href="../index.html">ホームに戻る</a>
+    </main>
+    <footer></footer>
+    <script src="../js/accordionmenu.js"></script>
+  </body>
+</html>
