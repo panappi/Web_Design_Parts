@@ -1,6 +1,10 @@
 @charset "utf-8";
 @use "style";
 
+.position-relative {
+  position: relative;
+}
+
 /* ローディング画面 */
 #loading {
   position: fixed;
@@ -8,33 +12,51 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+  // gap: 16px;
+
   transition: all 1s;
   background-color: #0bd;
   z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
+  // visibility: hidden;
+  // opacity: 0;
+  display: none;
 
   &.active {
-    opacity: 1;
-    visibility: visible;
+    // visibility: visible;
+    // opacity: 1;
+    display: block;
+    animation: appear 1s ease;
   }
 }
 .spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
   width: 100px;
   height: 100px;
   // margin: 0 auto;
   background-color: #fff;
   border-radius: 100%;
-  animation: sk-scaleout 1s infinite ease-in-out;
+  animation: scaleout 1s infinite ease-in-out;
 }
 
 /* ローディングアニメーション */
-@keyframes sk-scaleout {
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes scaleout {
   0% {
     transform: scale(0);
   }

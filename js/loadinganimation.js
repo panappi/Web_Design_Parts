@@ -1,6 +1,7 @@
 const loading = document.getElementById("loading");
 const toggleLoading = () => {
   loading.classList.toggle("active");
+  console.log("activeクラス切り替え");
 };
 
 // ５秒間だけローディング画面を表示する
