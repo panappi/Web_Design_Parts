@@ -9,22 +9,32 @@
     <link rel="stylesheet" href="../css/loadinganimation.css" />
   </head>
   <body class="position-relative">
+    <!-- ●ページを開くと表示される画面 -->
+    <!-- ローディング状況を数値とゲージで表示 -->
+    <div id="loadingBg"></div>
+    <div id="loading">
+      <div id="percent"><span id="percent-text"></span>％</div>
+      <div id="gauge"></div>
+    </div>
     <header></header>
     <main>
-      <div id="loading">
-        <div class="spinner"></div>
-        <button id="btn-cancel">CANCEL</button>
-      </div>
       <h2>ローディングアニメーション</h2>
       <div>
-        <h3>●テキスト</h3>
-        <p>テキストテキストテキスト</p>
-        <p>テキストテキストテキスト</p>
-        <p>テキストテキストテキスト</p>
+        <h3>●ボタンを押すと表示される画面</h3>
+        <div id="loading-2">
+          <div class="spinner"></div>
+          <button id="btn-cancel">CANCEL</button>
+        </div>
+        <button id="btn-start">START</button><br />
       </div>
 
-      <button id="btn-start">START</button><br />
-
+      <div>
+        <h3>●ローディング用画像</h3>
+        <img src="../img/spring.jpeg" alt="菜の花" />
+        <img src="../img/summer.jpeg" alt="海" />
+        <img src="../img/autumn.jpeg" alt="紅葉" />
+        <img src="../img/winter.jpg" alt="スキー場" />
+      </div>
       <a href="../index.html">ホームに戻る</a>
     </main>
     <footer></footer>
