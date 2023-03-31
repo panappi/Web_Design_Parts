@@ -1,0 +1,50 @@
+@charset "utf-8";
+@use "style";
+
+// アニメーション
+@keyframes hop {
+  0% {
+    transform: translateY(-8px);
+  }
+  25% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.fontsize-24 {
+  font-size: 24px;
+}
+
+#move-1 {
+  width: 60px;
+  text-align: center;
+  font-weight: bold;
+  color: style.$color-main;
+  // background-color: #fff;
+  // border-radius: 5px;
+  transition: ease 0.4s; /*クリック時の動きを遅延*/
+  &:hover {
+    // transform: rotateX(360deg);
+    animation: hop 1s;
+    color: style.$color-accent;
+  }
+}
+
+#move-2 {
+  width: 60px;
+  text-align: center;
+  color: style.$color-base;
+  background-color: style.$color-main;
+  border-radius: 5px;
+  transition: ease 0.4s; /*クリック時の動きを遅延*/
+  &.active {
+    transform: rotateX(360deg);
+    background-color: style.$color-accent;
+  }
+}
