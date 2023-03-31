@@ -52,7 +52,6 @@ var nowLoading = setInterval(function () {
 const loading2 = document.getElementById("loading-2");
 const toggleLoading = () => {
   loading2.classList.toggle("active");
-  console.log("activeクラス切り替え");
 };
 
 // ５秒間だけローディング画面を表示する
