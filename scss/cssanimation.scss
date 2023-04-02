@@ -54,9 +54,16 @@
   background-color: style.$color-main;
   border-radius: 5px;
   transition: ease 0.4s;
-  &.active {
+  // &.active {
+  &:hover {
     transform: rotateX(360deg);
     background-color: style.$color-accent;
+  }
+  &::before {
+    content: "hello";
+  }
+  &:hover::before {
+    content: "bye";
   }
 }
 
