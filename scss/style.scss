@@ -1,5 +1,11 @@
 @charset "utf-8";
 
+// 使用フォント
+//// キウイ丸
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap");
+$font-title: "Kiwi Maru", "ヒラギノ丸ゴ ProN", sans-serif;
+$font-text: "ヒラギノ丸ゴ ProN", sans-serif;
+
 // 使用カラー
 $color-base: #f8f5e4;
 $color-main: #242e68;
@@ -9,16 +15,48 @@ body {
   padding: 4%;
   background-color: $color-base;
   color: $color-main;
+  font-family: $font-text;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  h1 {
+    font-family: $font-title;
+    font-size: 24px;
+    font-weight: bold;
+  }
   li {
     display: inline-block;
   }
 }
 
-a {
-  border-bottom: solid 1px $color-main;
+.contents__container {
+  display: grid;
+  // grid-template-columns: 100px 100px;
+  grid-template-columns: repeat(2, 100px);
+  // grid-template-rows: 100px 100px 100px;
+  grid-template-rows: repeat(3, 100px);
+  justify-content: center;
+  gap: 24px;
+}
+
+.contents__item {
+  font-size: 11px;
+  // border: solid 4px $color-accent;
+  border-radius: 10px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  &:hover {
+    background-color: $color-accent;
+    color: $color-base;
+  }
+  a {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+  }
 }
