@@ -7,22 +7,38 @@
     <title>Web design parts</title>
     <link rel="stylesheet" href="./css/libs/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
   <body>
-    <header>
+    <header class="menu">
       <div>
-        <h1>Webデザイン パーツ集</h1>
+        <a class="rogo" href="index.html">Webデザイン<br />パーツ集</a>
       </div>
       <nav>
-        <ul>
-          <li>テキスト</li>
-          <li>テキスト</li>
-          <li>テキスト</li>
+        <ul class="menu__nav">
+          <li>このサイトについて</li>
+          <li>
+            <a class="menu__icon" href="mailto:date02tk&#64;gmail.com"
+              ><i class="ai-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="menu__icon"
+              href="https://twitter.com/panappi_02tk"
+              target="_blank"
+              ><i class="ai-twitter-fill"></i
+            ></a>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>パーツ カテゴリ</h2>
+      <div class="top">
+        <h1 class="rogo">Webデザイン<br />パーツ集</h1>
+        <p>CSSアニメーションとJavaScriptで<br />動きを実装しています</p>
+      </div>
+      <!-- <h2>パーツ カテゴリ</h2> -->
       <div class="contents__container">
         <div class="contents__item">
           <a href="./pages/hamburgermenu.html"
@@ -55,7 +71,21 @@
       </div>
     </main>
     <footer>
-      <p>Twitter : <a href="">@panappi_02tk</a></p>
+      <ul class="menu__nav">
+        <li>
+          <a class="menu__icon" href="mailto:date02tk&#64;gmail.com"
+            ><i class="ai-envelope"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="menu__icon"
+            href="https://twitter.com/panappi_02tk"
+            target="_blank"
+            ><i class="ai-twitter-fill"></i
+          ></a>
+        </li>
+      </ul>
     </footer>
   </body>
 </html>

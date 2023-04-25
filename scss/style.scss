@@ -18,16 +18,48 @@ body {
   font-family: $font-text;
 }
 
-header {
+.menu {
   display: flex;
   justify-content: space-between;
-  h1 {
-    font-family: $font-title;
-    font-size: 24px;
-    font-weight: bold;
+  align-items: center;
+  &__nav {
+    font-size: 12px;
+    display: flex;
+    gap: 16px;
   }
-  li {
-    display: inline-block;
+  &__icon {
+    width: 16px;
+    height: 16px;
+    font-size: 11px;
+    // padding: 10%;
+    border: solid 1px $color-main;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.rogo {
+  font-family: $font-title;
+  font-weight: bold;
+  text-align: center;
+}
+
+.top {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  h1 {
+    font-size: 32px;
+  }
+  p {
+    text-align: center;
+    font-size: 12px;
   }
 }
 
@@ -48,7 +80,7 @@ header {
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
   &:hover {
-    background-color: $color-accent;
+    background-color: $color-main;
     color: $color-base;
   }
   a {
@@ -59,4 +91,10 @@ header {
     height: 100%;
     padding: 4px;
   }
+}
+
+footer {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
 }
