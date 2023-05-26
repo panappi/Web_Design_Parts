@@ -11,6 +11,9 @@ $color-base: #f8f5e4;
 $color-main: #242e68;
 $color-accent: #539165;
 
+// ブレイクポイント
+$breakpoint-sp: 768px;
+
 body {
   padding: 4%;
   background-color: $color-base;
@@ -31,7 +34,6 @@ body {
     width: 16px;
     height: 16px;
     font-size: 11px;
-    // padding: 10%;
     border: solid 1px $color-main;
     border-radius: 50%;
     display: flex;
@@ -42,6 +44,7 @@ body {
 
 .rogo {
   font-family: $font-title;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
 }
@@ -65,17 +68,24 @@ body {
 
 .contents__container {
   display: grid;
-  // grid-template-columns: 100px 100px;
-  grid-template-columns: repeat(2, 100px);
-  // grid-template-rows: 100px 100px 100px;
-  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 160px);
+  grid-template-rows: repeat(2, 160px);
   justify-content: center;
-  gap: 24px;
+  gap: 40px;
+}
+
+@media screen and (max-width: $breakpoint-sp) {
+  .contents__container {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(3, 100px);
+    justify-content: center;
+    gap: 24px;
+  }
 }
 
 .contents__item {
-  font-size: 11px;
-  // border: solid 4px $color-accent;
+  font-size: 16px;
   border-radius: 10px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
   transition: 0.5s;
@@ -93,8 +103,14 @@ body {
   }
 }
 
+@media screen and (max-width: $breakpoint-sp) {
+  .contents__item {
+    font-size: 11px;
+  }
+}
+
 footer {
-  margin-top: 48px;
+  margin-top: 128px;
   display: flex;
   justify-content: center;
 }
