@@ -1,24 +1,116 @@
 @charset "utf-8";
 
+// 使用フォント
+//// キウイ丸
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap");
+$font-title: "Kiwi Maru", "ヒラギノ丸ゴ ProN", sans-serif;
+$font-text: "ヒラギノ丸ゴ ProN", sans-serif;
+
 // 使用カラー
 $color-base: #f8f5e4;
 $color-main: #242e68;
 $color-accent: #539165;
 
+// ブレイクポイント
+$breakpoint-sp: 768px;
+
 body {
   padding: 4%;
   background-color: $color-base;
   color: $color-main;
+  font-family: $font-text;
 }
 
-header {
+.menu {
   display: flex;
   justify-content: space-between;
-  li {
-    display: inline-block;
+  align-items: center;
+  &__nav {
+    font-size: 12px;
+    display: flex;
+    gap: 16px;
+  }
+  &__icon {
+    width: 16px;
+    height: 16px;
+    font-size: 11px;
+    border: solid 1px $color-main;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
-a {
-  border-bottom: solid 1px $color-main;
+.rogo {
+  font-family: $font-title;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.top {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  h1 {
+    font-size: 32px;
+  }
+  p {
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+.contents__container {
+  display: grid;
+  grid-template-columns: repeat(3, 160px);
+  grid-template-rows: repeat(2, 160px);
+  justify-content: center;
+  gap: 40px;
+}
+
+@media screen and (max-width: $breakpoint-sp) {
+  .contents__container {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(3, 100px);
+    justify-content: center;
+    gap: 24px;
+  }
+}
+
+.contents__item {
+  font-size: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  &:hover {
+    background-color: $color-main;
+    color: $color-base;
+  }
+  a {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sp) {
+  .contents__item {
+    font-size: 11px;
+  }
+}
+
+footer {
+  margin-top: 128px;
+  display: flex;
+  justify-content: center;
 }
