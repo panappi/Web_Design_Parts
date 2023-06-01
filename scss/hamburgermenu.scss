@@ -7,7 +7,14 @@ $button_span-width: $button-size * 0.6;
 $button_span-height: 3px;
 $button_span-gap: 8px;
 
-// 共通スタイル
+.contents__title {
+  margin: 48px 0 24px 0;
+  h2 {
+    font-size: 20px;
+  }
+}
+
+// メニュ‐ボタンの共通スタイル
 .btn {
   position: relative;
   width: $button-size;
@@ -26,7 +33,7 @@ $button_span-gap: 8px;
   // }
 }
 
-// 3本線から✗に変化するボタン-1
+// 3本線から✕に変化するボタン-1
 .btn_3x {
   span {
     position: absolute;
@@ -64,7 +71,7 @@ $button_span-gap: 8px;
   }
 }
 
-// 3本線から✗に変化するボタン-2
+// 3本線から✕に変化するボタン-2
 // 動作後のスタイル
 .btn_3x_2.active {
   span:nth-of-type(1) {
@@ -81,7 +88,7 @@ $button_span-gap: 8px;
   }
 }
 
-// 2本線から✗に変化するボタン
+// 2本線から✕に変化するボタン
 .btn_2x {
   span {
     position: absolute;
@@ -90,7 +97,7 @@ $button_span-gap: 8px;
     height: $button_span-height;
     background-color: style.$color-base;
     border-radius: $button_span-height;
-    transition: ease 0.4s; /*クリック時の動きを遅延*/
+    transition: ease 0.4s;
   }
   span:nth-of-type(1) {
     top: ($button-size - $button_span-height * 2 - $button_span-gap) * 0.5;
@@ -112,12 +119,12 @@ $button_span-gap: 8px;
   }
 }
 
-// MENUから✗に変化
+// MENUから✕に変化
 .btn_mx {
   span {
     position: absolute;
     left: ($button-size - $button_span-width) * 0.5;
-    transition: ease 0.4s; /*クリック時の動きを遅延*/
+    transition: ease 0.4s;
   }
   span:nth-of-type(1),
   span:nth-of-type(3) {
@@ -153,4 +160,8 @@ $button_span-gap: 8px;
     top: $button-size * 0.5;
     transform: rotate(-45deg);
   }
+}
+
+.home-icon {
+  font-size: 20px;
 }

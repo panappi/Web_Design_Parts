@@ -10,21 +10,21 @@
     <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
   <body>
-    <header class="menu">
+    <header class="head">
       <div>
         <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
       </div>
       <nav>
-        <ul class="menu__nav">
+        <ul class="head__nav">
           <li>このサイトについて</li>
           <li>
-            <a class="menu__icon" href="mailto:date02tk&#64;gmail.com"
+            <a class="head__nav-icon" href="mailto:date02tk&#64;gmail.com"
               ><i class="ai-envelope"></i
             ></a>
           </li>
           <li>
             <a
-              class="menu__icon"
+              class="head__nav-icon"
               href="https://twitter.com/panappi_02tk"
               target="_blank"
               ><i class="ai-twitter-fill"></i
@@ -34,34 +34,36 @@
       </nav>
     </header>
     <main>
-      <h2>ハンバーガーメニュー</h2>
-      <div>
-        <h3>3本線から✗に変化-1</h3>
-        <button id="btn_3x" class="btn btn_3x">
-          <span></span><span></span><span></span>
-        </button>
+      <div class="contents__title"><h2>ハンバーガーメニュー</h2></div>
+      <div class="contents__container">
+        <div class="contents__item">
+          <h3>3本線から✕に変化-1</h3>
+          <button id="btn_3x" class="btn btn_3x">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <div class="contents__item">
+          <h3>3本線から✕に変化-2</h3>
+          <button id="btn_3x_2" class="btn btn_3x btn_3x_2">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+        <div class="contents__item">
+          <h3>2本線から✕に変化</h3>
+          <button id="btn_2x" class="btn btn_2x">
+            <span></span><span></span>
+          </button>
+        </div>
+        <div class="contents__item">
+          <h3>MENUから✕に変化</h3>
+          <button id="btn_mx" class="btn btn_mx">
+            <span></span>
+            <span>MENU</span>
+            <span></span>
+          </button>
+        </div>
       </div>
-      <div>
-        <h3>3本線から✗に変化-2</h3>
-        <button id="btn_3x_2" class="btn btn_3x btn_3x_2">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-      <div>
-        <h3>2本線から✗に変化</h3>
-        <button id="btn_2x" class="btn btn_2x">
-          <span></span><span></span>
-        </button>
-      </div>
-      <div>
-        <h3>MENUから✗に変化</h3>
-        <button id="btn_mx" class="btn btn_mx">
-          <span></span>
-          <span>MENU</span>
-          <span></span>
-        </button>
-      </div>
-      <a href="../index.html">ホームに戻る</a>
+      <a class="home-icon" href="../index.html"><i class="ai-home-alt1"></i></a>
     </main>
     <footer></footer>
     <script src="../js/hamburgermenu.js"></script>
