@@ -1,5 +1,5 @@
 @charset "utf-8";
-@use "style";
+@use "common" as *;
 
 // 変数定義
 $button-size: 50px;
@@ -7,27 +7,20 @@ $button_span-width: $button-size * 0.6;
 $button_span-height: 3px;
 $button_span-gap: 8px;
 
-.contents__title {
-  margin: 48px 0 24px 0;
-  h2 {
-    font-size: 20px;
-  }
-}
-
 // メニュ‐ボタンの共通スタイル
 .btn {
   position: relative;
   width: $button-size;
   height: $button-size;
   margin: 8px;
-  background-color: style.$color-accent;
+  background-color: $color-accent;
   border-radius: $button-size * 0.1;
   // span {
   //   position: absolute;
   //   left: ($button-size - $button_span-width) * 0.5;
   //   width: $button_span-width;
   //   height: $button_span-height;
-  //   background-color: style.$color-base;
+  //   background-color: $color-base;
   //   border-radius: $button_span-height;
   //   transition: ease 0.4s; /*クリック時の動きを遅延*/
   // }
@@ -40,7 +33,7 @@ $button_span-gap: 8px;
     left: ($button-size - $button_span-width) * 0.5;
     width: $button_span-width;
     height: $button_span-height;
-    background-color: style.$color-base;
+    background-color: $color-base;
     border-radius: $button_span-height;
     transition: ease 0.4s; /*クリック時の動きを遅延*/
   }
@@ -95,7 +88,7 @@ $button_span-gap: 8px;
     left: ($button-size - $button_span-width) * 0.5;
     width: $button_span-width;
     height: $button_span-height;
-    background-color: style.$color-base;
+    background-color: $color-base;
     border-radius: $button_span-height;
     transition: ease 0.4s;
   }
@@ -130,14 +123,14 @@ $button_span-gap: 8px;
   span:nth-of-type(3) {
     width: $button_span-width;
     height: $button_span-height;
-    background-color: style.$color-base;
+    background-color: $color-base;
     border-radius: $button_span-height;
   }
   span:nth-of-type(1) {
     top: ($button-size - $button_span-height * 3 - $button_span-gap * 2) * 0.5;
   }
   span:nth-of-type(2) {
-    color: style.$color-base;
+    color: $color-base;
     top: $button-size * 0.5 - 6px;
     font-size: 6px;
     text-transform: uppercase;
@@ -160,9 +153,4 @@ $button_span-gap: 8px;
     top: $button-size * 0.5;
     transform: rotate(-45deg);
   }
-}
-
-.home-icon {
-  font-size: 20px;
-  float: right;
 }

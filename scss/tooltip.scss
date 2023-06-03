@@ -1,5 +1,6 @@
 @charset "utf-8";
-@use "style";
+// @use "style";
+@use "common" as *;
 
 // カスタムデータ属性を使用
 .tooltip {

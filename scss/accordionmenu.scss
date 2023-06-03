@@ -1,5 +1,6 @@
 @charset "utf-8";
-@use "style";
+// @use "style";
+@use "common" as *;
 
 // cssのみで実装
 .menu {
@@ -12,12 +13,12 @@
     padding: 20px;
     line-height: 1;
     color: #fff;
-    background: style.$color-accent;
+    background: $color-accent;
     cursor: pointer;
     font-family: sans-serif;
     font-weight: bold;
     &:hover {
-      background: style.$color-main;
+      background: $color-main;
     }
   }
   ul {
@@ -44,14 +45,14 @@
   #type01:checked + label,
   #type02:checked + label,
   #type03:checked + label {
-    background: style.$color-main;
+    background: $color-main;
   }
 }
 
 // css・jsで実装
 .menu-2 {
   ul {
-    background-color: style.$color-accent;
+    background-color: $color-accent;
     width: 150px;
     padding: 0;
     color: #fff;

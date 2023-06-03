@@ -1,0 +1,101 @@
+@charset "utf-8";
+@use "variables" as *;
+@forward "variables";
+
+// 使用フォント
+//// キウイ丸
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap");
+$font-title: "Kiwi Maru", "ヒラギノ丸ゴ ProN", sans-serif;
+$font-text: "ヒラギノ丸ゴ ProN", sans-serif;
+
+body {
+  padding: 4%;
+  background-color: $color-base;
+  color: $color-main;
+  font-family: $font-text;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__nav {
+    font-size: 12px;
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.rogo {
+  font-family: $font-title;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+  border: solid 1px $color-main;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contents__title {
+  margin: 48px 0 24px 0;
+  h2 {
+    font-size: 20px;
+  }
+}
+
+.contents__container {
+  display: grid;
+  grid-template-columns: repeat(4, 160px);
+  grid-template-rows: repeat(2, 160px);
+  justify-content: center;
+  gap: 40px;
+  .contents__item {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tb) {
+  .contents__container {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(2, 120px);
+    justify-content: center;
+    gap: 32px;
+  }
+  .contents__item {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-sp) {
+  .contents__container {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(3, 100px);
+    justify-content: center;
+    gap: 24px;
+  }
+  .contents__item {
+    font-size: 11px;
+  }
+}
+
+.home-icon {
+  font-size: 20px;
+  float: right;
+}

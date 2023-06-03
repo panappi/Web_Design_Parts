@@ -1,5 +1,6 @@
 @charset "utf-8";
-@use "style";
+// @use "style";
+@use "common" as *;
 
 .position-relative {
   position: relative;
@@ -34,7 +35,7 @@
 #loading #gauge {
   width: 0px;
   height: 5px;
-  background: style.$color-accent;
+  background: $color-accent;
 }
 
 // ボタンを押すと表示される画面
@@ -67,7 +68,7 @@
   animation: scaleout 1s infinite ease-in-out;
 }
 button {
-  border: solid 1px style.$color-main;
+  border: solid 1px $color-main;
   border-radius: 5px;
 }
 

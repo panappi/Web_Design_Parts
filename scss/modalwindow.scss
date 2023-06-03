@@ -1,5 +1,6 @@
 @charset "utf-8";
-@use "style";
+// @use "style";
+@use "common" as *;
 
 // 変数定義
 
@@ -21,7 +22,7 @@
 }
 
 .link_login {
-  border: solid 1px style.$color-main;
+  border: solid 1px $color-main;
   border-radius: 5px;
 }
 
@@ -50,6 +51,6 @@
 }
 
 .btn-1 {
-  border: solid 1px style.$color-main;
+  border: solid 1px $color-main;
   border-radius: 5px;
 }

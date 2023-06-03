@@ -1,5 +1,6 @@
 @charset "utf-8";
-@use "style";
+// @use "style";
+@use "common" as *;
 
 // アニメーション
 @keyframes hop {
@@ -39,25 +40,25 @@
   width: 60px;
   text-align: center;
   font-weight: bold;
-  color: style.$color-main;
+  color: $color-main;
   transition: ease 0.4s; /*クリック時の動きを遅延*/
   &:hover {
     animation: hop 1s;
-    color: style.$color-accent;
+    color: $color-accent;
   }
 }
 
 #move-2 {
   width: 60px;
   text-align: center;
-  color: style.$color-base;
-  background-color: style.$color-main;
+  color: $color-base;
+  background-color: $color-main;
   border-radius: 5px;
   transition: ease 0.4s;
   // &.active {
   &:hover {
     transform: rotateX(360deg);
-    background-color: style.$color-accent;
+    background-color: $color-accent;
   }
   &::before {
     content: "hello";
@@ -71,10 +72,10 @@
   position: relative;
   width: 60px;
   text-align: center;
-  color: style.$color-main;
+  color: $color-main;
   transition: ease 1s;
   &:hover {
-    color: style.$color-base;
+    color: $color-base;
   }
   &::after {
     content: "";
@@ -84,7 +85,7 @@
     left: 0;
     width: 0px;
     height: 1px;
-    background-color: style.$color-accent;
+    background-color: $color-accent;
     border-radius: 5px;
     transition: ease 0.4s;
   }
