@@ -9,6 +9,7 @@ $font-title: "Kiwi Maru", "ヒラギノ丸ゴ ProN", sans-serif;
 $font-text: "ヒラギノ丸ゴ ProN", sans-serif;
 
 body {
+  position: relative;
   padding: 4%;
   background-color: $color-base;
   color: $color-main;
@@ -19,10 +20,78 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &__nav {
-    font-size: 12px;
+  // tb,pc用ナビメニュー
+  &__nav-tb {
+    font-size: 14px;
     display: flex;
     gap: 16px;
+  }
+  &__nav-btn {
+    position: relative;
+    width: $nav_btn-size;
+    height: $nav_btn-size;
+    // margin: 8px;
+    // background-color: $color-accent;
+    border-radius: $nav_btn-size * 0.1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    span {
+      position: absolute;
+      left: ($nav_btn-size - $nav_btn_span-width) * 0.5;
+      width: $nav_btn_span-width;
+      height: $nav_btn_span-height;
+      background-color: $color-main;
+      border-radius: $nav_btn_span-height;
+      transition: ease 0.4s;
+    }
+    span:nth-of-type(1) {
+      top: ($nav_btn-size - $nav_btn_span-height * 3 - $nav_btn_span-gap * 2) *
+        0.5;
+    }
+    span:nth-of-type(2) {
+      top: (
+          ($nav_btn-size - $nav_btn_span-height * 3 - $nav_btn_span-gap * 2) *
+            0.5
+        ) + $nav_btn_span-height + $nav_btn_span-gap;
+    }
+    span:nth-of-type(3) {
+      top: (
+          ($nav_btn-size - $nav_btn_span-height * 3 - $nav_btn_span-gap * 2) *
+            0.5
+        ) + $nav_btn_span-height * 2 + $nav_btn_span-gap * 2;
+    }
+    // 動作後のスタイル
+    &.active {
+      span:nth-of-type(1) {
+        top: $nav_btn-size * 0.5;
+        transform: rotate(405deg);
+      }
+      span:nth-of-type(2) {
+        transform: rotate(360deg);
+        opacity: 0;
+      }
+      span:nth-of-type(3) {
+        top: $nav_btn-size * 0.5;
+        transform: rotate(495deg);
+      }
+    }
+  }
+}
+// sp用ナビメニュー
+.nav-sp {
+  position: relative;
+  top: 12px;
+  right: -104%;
+  width: 50vw;
+  transition: ease 0.4s;
+  ul {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  &.active {
+    right: -46%;
   }
 }
 
@@ -34,14 +103,7 @@ body {
 }
 
 .contact-icon {
-  width: 16px;
-  height: 16px;
-  font-size: 11px;
-  border: solid 1px $color-main;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 16px;
 }
 
 .contents__title {
@@ -53,8 +115,8 @@ body {
 
 .contents__container {
   display: grid;
-  grid-template-columns: repeat(4, 160px);
-  grid-template-rows: repeat(2, 160px);
+  grid-template-columns: repeat(2, 100px);
+  grid-template-rows: repeat(3, 100px);
   justify-content: center;
   gap: 40px;
   .contents__item {
@@ -62,36 +124,36 @@ body {
     place-items: center;
     text-align: center;
     padding: 4px;
-    font-size: 16px;
+    font-size: 11px;
     border-radius: 10px;
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
     transition: 0.5s;
   }
 }
 
-@media screen and (max-width: $breakpoint-tb) {
+@media screen and (min-width: $breakpoint-tb) {
   .contents__container {
     display: grid;
     grid-template-columns: repeat(3, 120px);
     grid-template-rows: repeat(2, 120px);
     justify-content: center;
     gap: 32px;
-  }
-  .contents__item {
-    font-size: 14px;
+    .contents__item {
+      font-size: 14px;
+    }
   }
 }
 
-@media screen and (max-width: $breakpoint-sp) {
+@media screen and (min-width: $breakpoint-pc) {
   .contents__container {
     display: grid;
-    grid-template-columns: repeat(2, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(4, 160px);
+    grid-template-rows: repeat(2, 160px);
     justify-content: center;
     gap: 24px;
-  }
-  .contents__item {
-    font-size: 11px;
+    .contents__item {
+      font-size: 16px;
+    }
   }
 }
 
