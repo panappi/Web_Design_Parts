@@ -8,13 +8,19 @@ $breakpoint-pc: 960px;
 $breakpoint-tb: 744px;
 
 // ハンバーガーメニューボタン
-// 全ページのナビメニューにて使用
+// 全ページのheadにて使用
 $nav_btn-size: 32px;
 $nav_btn_span-width: $nav_btn-size * 0.6;
 $nav_btn_span-height: 2px;
 $nav_btn_span-gap: 4px;
 // hamburegrmenuにて使用
+// contents
 $button-size: 50px;
 $button_span-width: $button-size * 0.6;
 $button_span-height: 3px;
 $button_span-gap: 8px;
+// mockup
+$mu_btn-size: 24px;
+$mu_btn_span-width: $mu_btn-size * 0.6;
+$mu_btn_span-height: 1.6px;
+$mu_btn_span-gap: 3.6px;

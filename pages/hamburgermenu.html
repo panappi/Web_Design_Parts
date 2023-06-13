@@ -11,11 +11,14 @@
   </head>
   <body>
     <header class="head">
-      <div>
-        <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
-      </div>
+      <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
       <nav>
-        <ul class="head__nav">
+        <!-- sp用ナビメニューのボタン -->
+        <button id="nav_btn" class="head__nav-btn">
+          <span></span><span></span><span></span>
+        </button>
+        <!-- tb,pc用ナビメニュー -->
+        <ul id="nav_tb" class="head__nav-tb hide">
           <li>このサイトについて</li>
           <li>
             <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
@@ -33,39 +36,96 @@
         </ul>
       </nav>
     </header>
+    <!-- sp用ナビメニュー -->
+    <div id="nav_sp" class="nav-sp">
+      <ul>
+        <li>このサイトについて</li>
+        <li>
+          <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
+            ><i class="ai-envelope"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="contact-icon"
+            href="https://twitter.com/panappi_02tk"
+            target="_blank"
+            ><i class="ai-twitter-fill"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
     <main>
-      <div class="contents__title"><h2>ハンバーガーメニュー</h2></div>
-      <div class="contents__container">
-        <div class="contents__item">
-          <h3>3本線から✕に変化-1</h3>
-          <button id="btn_3x" class="btn btn-3x btn-3x-1">
-            <span></span><span></span><span></span>
-          </button>
+      <section class="contents">
+        <div class="contents__title"><h2>ハンバーガーメニュー</h2></div>
+        <div class="contents__container">
+          <div class="contents__item">
+            <h3>3本線から✕に変化-1</h3>
+            <button id="btn_3x" class="btn btn-3x btn-3x-1">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+          <div class="contents__item">
+            <h3>3本線から✕に変化-2</h3>
+            <button id="btn_3x_2" class="btn btn-3x btn-3x-2">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+          <div class="contents__item">
+            <h3>3本線から✕に変化-3</h3>
+            <button id="btn_3x_3" class="btn btn-3x btn-3x-3">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+          <div class="contents__item">
+            <h3>2本線から✕に変化</h3>
+            <button id="btn_2x" class="btn btn-2x">
+              <span></span><span></span>
+            </button>
+          </div>
+          <div class="contents__item">
+            <h3>MENUから✕に変化</h3>
+            <button id="btn_mx" class="btn btn-mx">
+              <span></span>
+              <span>MENU</span>
+              <span></span>
+            </button>
+          </div>
         </div>
-        <div class="contents__item">
-          <h3>3本線から✕に変化-2</h3>
-          <button id="btn_3x_2" class="btn btn-3x btn-3x-2">
-            <span></span><span></span><span></span>
-          </button>
+      </section>
+      <section class="mockup">
+        <p>メニューリストの動きと合わせて確認できます</p>
+        <div class="mockup__container">
+          <img class="mockup__screen" src="../img/iphone.png" alt="" />
+          <div class="mockup__head">
+            <p class="mockup__head-rogo">Webデザイン<br />パーツ集</p>
+            <!-- sp用ナビメニューのボタン -->
+            <button id="mockup_btn" class="mockup__head-btn">
+              <span></span><span></span><span></span>
+            </button>
+            <!-- sp用ナビメニュー -->
+            <div id="mockup_nav" class="mockup__head-nav">
+              <ul>
+                <li>このサイトについて</li>
+                <li>
+                  <div class="contact-icon"><i class="ai-envelope"></i></div>
+                </li>
+                <li>
+                  <div class="contact-icon">
+                    <i class="ai-twitter-fill"></i>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="mockup__blind"></div>
+          </div>
         </div>
-        <div class="contents__item">
-          <h3>2本線から✕に変化</h3>
-          <button id="btn_2x" class="btn btn-2x">
-            <span></span><span></span>
-          </button>
-        </div>
-        <div class="contents__item">
-          <h3>MENUから✕に変化</h3>
-          <button id="btn_mx" class="btn btn-mx">
-            <span></span>
-            <span>MENU</span>
-            <span></span>
-          </button>
-        </div>
-      </div>
+      </section>
+
       <a class="home-icon" href="../index.html"><i class="ai-home-alt1"></i></a>
     </main>
     <footer></footer>
+    <script src="../js/common.js"></script>
     <script src="../js/hamburgermenu.js"></script>
   </body>
 </html>

@@ -9,29 +9,38 @@ $font-title: "Kiwi Maru", "ヒラギノ丸ゴ ProN", sans-serif;
 $font-text: "ヒラギノ丸ゴ ProN", sans-serif;
 
 body {
-  position: relative;
   padding: 4%;
   background-color: $color-base;
   color: $color-main;
   font-family: $font-text;
 }
 
+.hide {
+  display: none !important;
+}
+
 .head {
+  // TODO: nav-spがあると固定されない、display: none;すると固定できる
+  // 固定できたとしても要素上部のスペースが気になる
+  // position: fixed;
+  // left: 0;
+  // right: 0;
+  background-color: $color-base;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 16px;
   // tb,pc用ナビメニュー
   &__nav-tb {
     font-size: 14px;
     display: flex;
     gap: 16px;
   }
+  // sp用ナビメニューのボタン
   &__nav-btn {
     position: relative;
     width: $nav_btn-size;
     height: $nav_btn-size;
-    // margin: 8px;
-    // background-color: $color-accent;
     border-radius: $nav_btn-size * 0.1;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     span {
@@ -78,20 +87,22 @@ body {
 }
 // sp用ナビメニュー
 .nav-sp {
-  position: relative;
-  top: 12px;
-  right: -104%;
+  // TODO: 画面を横スクロールすると見えてしまう
+  position: absolute;
+  right: -100%;
   width: 50vw;
   transition: ease 0.4s;
   ul {
     display: flex;
     flex-flow: column;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     gap: 16px;
+    font-size: 16px;
+    // text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
   &.active {
-    right: -46%;
+    right: 4%;
   }
 }
 
@@ -106,25 +117,39 @@ body {
   font-size: 16px;
 }
 
-.contents__title {
-  margin: 48px 0 24px 0;
-  h2 {
-    font-size: 20px;
-  }
-}
-
-.contents__container {
-  display: grid;
-  grid-template-columns: repeat(2, 100px);
-  grid-template-rows: repeat(3, 100px);
-  justify-content: center;
+.contents {
+  display: flex;
+  flex-flow: column;
+  margin: 48px 0 48px 0;
   gap: 40px;
-  .contents__item {
+
+  &__title {
+    // margin: 48px 0 24px 0;
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  &__container {
+    // display: grid;
+    // grid-template-columns: repeat(2, 100px);
+    // grid-template-rows: repeat(3, 100px);
+    // justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100 * 2+40 * 1px; // TODO: 表記これで合ってる？
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  &__item {
     display: grid;
     place-items: center;
     text-align: center;
     padding: 4px;
-    font-size: 11px;
+    width: 100px;
+    height: 100px;
+    font-size: 12px;
     border-radius: 10px;
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
     transition: 0.5s;
@@ -133,12 +158,14 @@ body {
 
 @media screen and (min-width: $breakpoint-tb) {
   .contents__container {
-    display: grid;
-    grid-template-columns: repeat(3, 120px);
-    grid-template-rows: repeat(2, 120px);
-    justify-content: center;
-    gap: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 140 * 3+40 * 2px; // TODO: 表記これで合ってる？
+    margin: 0 auto;
+    gap: 40px;
     .contents__item {
+      width: 140px;
+      height: 140px;
       font-size: 14px;
     }
   }
@@ -146,12 +173,14 @@ body {
 
 @media screen and (min-width: $breakpoint-pc) {
   .contents__container {
-    display: grid;
-    grid-template-columns: repeat(4, 160px);
-    grid-template-rows: repeat(2, 160px);
-    justify-content: center;
-    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 160 * 4+40 * 3px; // TODO: 表記これで合ってる？
+    margin: 0 auto;
+    gap: 40px;
     .contents__item {
+      width: 160px;
+      height: 160px;
       font-size: 16px;
     }
   }
