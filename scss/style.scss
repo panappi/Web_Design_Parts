@@ -32,3 +32,25 @@
     gap: 16px;
   }
 }
+
+@media screen and (min-width: $breakpoint-tb) {
+  .top {
+    h1 {
+      font-size: 38px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-pc) {
+  .top {
+    h1 {
+      font-size: 42px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
