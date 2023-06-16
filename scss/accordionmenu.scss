@@ -4,7 +4,7 @@
 
 // cssのみで実装
 .menu {
-  max-width: 400px;
+  width: 240px;
   input {
     display: none;
   }
@@ -14,46 +14,41 @@
     line-height: 1;
     color: #fff;
     background: $color-accent;
-    cursor: pointer;
-    font-family: sans-serif;
+    cursor: pointer; // TODO: aタグにも使える？
     font-weight: bold;
     &:hover {
       background: $color-main;
     }
   }
   ul {
-    margin: 0 0 5px 0;
-    padding: 0;
+    margin-bottom: 5px;
+    padding: 0 20px;
     background: #fff;
     li {
       height: 0;
       overflow: hidden;
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      -ms-transition: all 0.5s;
-      -o-transition: all 0.5s;
       transition: all 0.5s;
-      font-family: sans-serif;
     }
   }
-  #type01:checked ~ #links01 li,
-  #type02:checked ~ #links02 li,
-  #type03:checked ~ #links03 li {
-    height: 100px;
+  #type_1:checked ~ #links_1 li,
+  #type_2:checked ~ #links_2 li,
+  #type_3:checked ~ #links_3 li {
+    height: auto;
     visibility: visible;
   }
-  #type01:checked + label,
-  #type02:checked + label,
-  #type03:checked + label {
+  #type_1:checked + label,
+  #type_2:checked + label,
+  #type_3:checked + label {
     background: $color-main;
   }
 }
 
 // css・jsで実装
 .menu-2 {
+  width: 150px;
   ul {
     background-color: $color-accent;
-    width: 150px;
+    // width: 150px;
     padding: 0;
     color: #fff;
   }

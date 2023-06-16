@@ -7,65 +7,126 @@
     <title>Accordion menu</title>
     <link rel="stylesheet" href="../css/libs/reset.css" />
     <link rel="stylesheet" href="../css/accordionmenu.css" />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
   <body>
-    <header></header>
-    <main>
-      <h2>アコーディオンメニュー</h2>
-      <div>
-        <h3>●cssのみで実装</h3>
-        <div class="menu">
-          <input type="checkbox" id="type01" />
-          <label for="type01">▼ アコーディオンメニュー ①</label>
-          <ul id="links01">
-            <li>・ここに内容が入ります。</li>
-          </ul>
-          <input type="checkbox" id="type02" />
-          <label for="type02">▼ アコーディオンメニュー ②</label>
-          <ul id="links02">
-            <li>・ここに内容が入ります。</li>
-          </ul>
-          <input type="checkbox" id="type03" />
-          <label for="type03">▼ アコーディオンメニュー ③</label>
-          <ul id="links03">
-            <li>・ここに内容が入ります。</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="menu-2">
-        <h3>●css・jsで実装</h3>
-        <ul class="include-accordion scroll-control">
+    <header class="head">
+      <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
+      <nav>
+        <!-- sp用ナビメニューのボタン -->
+        <button id="nav_btn" class="head__nav-btn">
+          <span></span><span></span><span></span>
+        </button>
+        <!-- tb,pc用ナビメニュー -->
+        <ul id="nav_tb" class="head__nav-tb hide">
+          <li>このサイトについて</li>
           <li>
-            <button class="accordionBtn" type="button">Menu-1</button>
-            <ul>
-              <li>List 1-1</li>
-              <li>List 1-2</li>
-              <li>List 1-3</li>
-            </ul>
+            <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
+              ><i class="ai-envelope"></i
+            ></a>
           </li>
           <li>
-            <button class="accordionBtn" type="button">Menu-2</button>
-            <ul>
-              <li>List 2-1</li>
-              <li>List 2-2</li>
-              <li>List 2-3</li>
-            </ul>
-          </li>
-          <li>
-            <button class="accordionBtn" type="button">Menu-3</button>
-            <ul>
-              <li>List 3-1</li>
-              <li>List 3-2</li>
-              <li>List 3-3</li>
-            </ul>
+            <a
+              class="contact-icon"
+              href="https://twitter.com/panappi_02tk"
+              target="_blank"
+              ><i class="ai-twitter-fill"></i
+            ></a>
           </li>
         </ul>
-      </div>
+      </nav>
+    </header>
+    <!-- sp用ナビメニュー -->
+    <div id="nav_sp" class="nav-sp">
+      <ul>
+        <li>このサイトについて</li>
+        <li>
+          <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
+            ><i class="ai-envelope"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="contact-icon"
+            href="https://twitter.com/panappi_02tk"
+            target="_blank"
+            ><i class="ai-twitter-fill"></i
+          ></a>
+        </li>
+      </ul>
+    </div>
+    <main>
+      <section class="contents">
+        <div class="contents__title">
+          <img src="../img/dot-green.svg" />
+          <h2>アコーディオンメニュー</h2>
+        </div>
+        <!-- TODO: 別クラスを準備する -->
+        <div class="contents__container-2">
+          <div class="contents__item-2">
+            <h3>●cssのみで実装</h3>
+            <div class="menu">
+              <input type="checkbox" id="type_1" />
+              <label for="type_1">▼ メニュー ①</label>
+              <ul id="links_1">
+                <li>・テキスト</li>
+                <li>・テキスト</li>
+                <li>・テキスト</li>
+              </ul>
+              <input type="checkbox" id="type_2" />
+              <label for="type_2">▼ メニュー ②</label>
+              <ul id="links_2">
+                <li>・テキスト</li>
+                <li>・テキスト</li>
+                <li>・テキスト</li>
+              </ul>
+              <input type="checkbox" id="type_3" />
+              <label for="type_3">▼ メニュー ③</label>
+              <ul id="links_3">
+                <li>・テキスト</li>
+                <li>・テキスト</li>
+                <li>・テキスト</li>
+              </ul>
+            </div>
+          </div>
+          <div class="contents__item-2">
+            <h3>●css・jsで実装</h3>
+            <div class="menu-2">
+              <ul class="include-accordion scroll-control">
+                <li>
+                  <button class="accordionBtn" type="button">Menu-1</button>
+                  <ul>
+                    <li>List 1-1</li>
+                    <li>List 1-2</li>
+                    <li>List 1-3</li>
+                  </ul>
+                </li>
+                <li>
+                  <button class="accordionBtn" type="button">Menu-2</button>
+                  <ul>
+                    <li>List 2-1</li>
+                    <li>List 2-2</li>
+                    <li>List 2-3</li>
+                  </ul>
+                </li>
+                <li>
+                  <button class="accordionBtn" type="button">Menu-3</button>
+                  <ul>
+                    <li>List 3-1</li>
+                    <li>List 3-2</li>
+                    <li>List 3-3</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <a href="../index.html">ホームに戻る</a>
+      <a class="home-icon" href="../index.html"><i class="ai-home-alt1"></i></a>
     </main>
     <footer></footer>
+    <script src="../js/common.js"></script>
     <script src="../js/accordionmenu.js"></script>
   </body>
 </html>
