@@ -2,38 +2,103 @@
 // @use "style";
 @use "common" as *;
 
+.contents__container-2 {
+  display: flex;
+  // flex-flow: column;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.contents__item-2 {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  gap: 8px;
+  width: 240px;
+  // height: 240px;
+  height: auto;
+  font-size: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+  // transition: 0.5s;
+}
+
+@media screen and (min-width: $breakpoint-tb) {
+  .contents__container-2 {
+    // display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    // width: 140 * 3+40 * 2px; // TODO: 表記これで合ってる？
+    // margin: 0 auto;
+    // gap: 40px;
+    .contents__item-2 {
+      padding: 16px;
+      width: 360px;
+      // height: 140px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-pc) {
+  .contents__container-2 {
+    // display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    // width: 160 * 4+40 * 3px; // TODO: 表記これで合ってる？
+    // margin: 0 auto;
+    // gap: 40px;
+    .contents__item-2 {
+      padding: 24px;
+      width: 400px;
+      // height: 160px;
+      font-size: 16px;
+    }
+  }
+}
+
 // cssのみで実装
 .menu {
-  width: 240px;
+  display: flex;
+  flex-flow: column;
+  gap: 4px;
+  // width: 216px;
+  text-align: left;
+  li {
+    width: 216px;
+  }
   input {
     display: none;
   }
   label {
     display: block;
-    padding: 20px;
+    padding: 16px;
     line-height: 1;
     color: #fff;
     background: $color-accent;
     cursor: pointer; // TODO: aタグにも使える？
-    font-weight: bold;
     &:hover {
       background: $color-main;
+      transition: all 0.5s;
     }
   }
   ul {
-    margin-bottom: 5px;
-    padding: 0 20px;
+    padding: 0 16px;
     background: #fff;
     li {
       height: 0;
       overflow: hidden;
-      transition: all 0.5s;
     }
   }
   #type_1:checked ~ #links_1 li,
   #type_2:checked ~ #links_2 li,
   #type_3:checked ~ #links_3 li {
     height: auto;
+    padding: 8px 0 8px 8px;
     visibility: visible;
   }
   #type_1:checked + label,
@@ -45,46 +110,44 @@
 
 // css・jsで実装
 .menu-2 {
-  width: 150px;
-  ul {
-    background-color: $color-accent;
-    // width: 150px;
-    padding: 0;
-    color: #fff;
-  }
+  display: flex;
+  flex-flow: column;
+  padding: 0;
+  gap: 4px;
+  width: 216px;
+  text-align: left;
   li {
-    list-style: none;
+    background-color: $color-accent;
   }
-  ul ul {
+  ul {
     height: 0;
+    margin: 0;
     padding: 0;
     overflow: hidden;
     transition: 0.5s;
-    border-top: 1px solid #67a863;
-    background-color: #5eaa6c;
-    margin: 0;
-  }
-  ul li li {
-    border-bottom: 1px dotted #7fbf8b;
-    padding: 10px 0 10px 10px;
-    margin-left: 15px;
-  }
-  ul:nth-of-type(1) li.active li:last-child {
-    border-bottom: 1px solid #67a863;
+    background-color: #fff;
+    li {
+      margin-left: 16px;
+      padding: 8px 0 8px 8px;
+      background-color: #fff;
+    }
   }
   button {
     position: relative;
-    border: none;
+    padding: 15px 0 15px 20px;
     width: 100%;
     background-color: inherit;
     color: #fff;
     cursor: pointer;
     text-align: left;
-    padding: 15px 0 15px 20px;
     font-size: 1em;
   }
   button:hover {
-    background-color: #1a5b27;
+    background-color: $color-main;
+    transition: all 0.5s;
+  }
+  li.active {
+    background-color: $color-main;
   }
   button::before,
   button::after {
@@ -111,22 +174,6 @@
   li.active button::after {
     transform: translateY(-50%) rotate(135deg);
     transition: 0.5s;
-  }
-  ul:nth-of-type(2) {
-    background-color: #357d87;
-  }
-  ul:nth-of-type(2) ul {
-    background-color: #519fa5;
-    border-top: 1px solid #5d9fa8;
-  }
-  ul:nth-of-type(2) button:hover {
-    background-color: #1c4b56;
-  }
-  ul:nth-of-type(2) li li {
-    border-bottom: 1px dotted #73bebf;
-  }
-  ul:nth-of-type(2) li.active li:last-child {
-    border-bottom: 1px solid #5d9fa8;
   }
   ul.active {
     overflow-y: auto;

@@ -165,11 +165,7 @@ body {
 
 @media screen and (min-width: $breakpoint-tb) {
   .contents__container {
-    display: flex;
-    flex-wrap: wrap;
     width: 140 * 3+40 * 2px; // TODO: 表記これで合ってる？
-    margin: 0 auto;
-    gap: 40px;
     .contents__item {
       padding: 16px;
       width: 140px;
@@ -181,11 +177,7 @@ body {
 
 @media screen and (min-width: $breakpoint-pc) {
   .contents__container {
-    display: flex;
-    flex-wrap: wrap;
     width: 160 * 4+40 * 3px; // TODO: 表記これで合ってる？
-    margin: 0 auto;
-    gap: 40px;
     .contents__item {
       padding: 24px;
       width: 160px;

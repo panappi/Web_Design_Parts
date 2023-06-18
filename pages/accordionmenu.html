@@ -64,61 +64,65 @@
         <!-- TODO: 別クラスを準備する -->
         <div class="contents__container-2">
           <div class="contents__item-2">
-            <h3>●cssのみで実装</h3>
-            <div class="menu">
-              <input type="checkbox" id="type_1" />
-              <label for="type_1">▼ メニュー ①</label>
-              <ul id="links_1">
-                <li>・テキスト</li>
-                <li>・テキスト</li>
-                <li>・テキスト</li>
-              </ul>
-              <input type="checkbox" id="type_2" />
-              <label for="type_2">▼ メニュー ②</label>
-              <ul id="links_2">
-                <li>・テキスト</li>
-                <li>・テキスト</li>
-                <li>・テキスト</li>
-              </ul>
-              <input type="checkbox" id="type_3" />
-              <label for="type_3">▼ メニュー ③</label>
-              <ul id="links_3">
-                <li>・テキスト</li>
-                <li>・テキスト</li>
-                <li>・テキスト</li>
-              </ul>
-            </div>
+            <h3>複数項目を同時に開示可能<br />※CSSのみで実装</h3>
+            <ul class="menu">
+              <li>
+                <input type="checkbox" id="type_1" />
+                <label for="type_1">▼ Menu-1</label>
+                <ul id="links_1">
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" id="type_2" />
+                <label for="type_2">▼ Menu-2</label>
+                <ul id="links_2">
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" id="type_3" />
+                <label for="type_3">▼ Menu-3</label>
+                <ul id="links_3">
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                </ul>
+              </li>
+            </ul>
           </div>
           <div class="contents__item-2">
-            <h3>●css・jsで実装</h3>
-            <div class="menu-2">
-              <ul class="include-accordion scroll-control">
-                <li>
-                  <button class="accordionBtn" type="button">Menu-1</button>
-                  <ul>
-                    <li>List 1-1</li>
-                    <li>List 1-2</li>
-                    <li>List 1-3</li>
-                  </ul>
-                </li>
-                <li>
-                  <button class="accordionBtn" type="button">Menu-2</button>
-                  <ul>
-                    <li>List 2-1</li>
-                    <li>List 2-2</li>
-                    <li>List 2-3</li>
-                  </ul>
-                </li>
-                <li>
-                  <button class="accordionBtn" type="button">Menu-3</button>
-                  <ul>
-                    <li>List 3-1</li>
-                    <li>List 3-2</li>
-                    <li>List 3-3</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
+            <h3>１項目のみ開示可能<br />※CSS・JSで実装</h3>
+            <ul class="menu-2 include-accordion scroll-control">
+              <li>
+                <button class="accordionBtn" type="button">Menu-1</button>
+                <ul>
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                </ul>
+              </li>
+              <li>
+                <button class="accordionBtn" type="button">Menu-2</button>
+                <ul>
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                </ul>
+              </li>
+              <li>
+                <button class="accordionBtn" type="button">Menu-3</button>
+                <ul>
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                  <li>・テキスト</li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
