@@ -6,6 +6,10 @@
 .tooltip {
   position: relative;
   cursor: pointer;
+  padding: 0 12px;
+  background: $color-accent;
+  color: $color-base;
+  border-radius: 3px;
 }
 /* ツールチップ全体の設定 */
 .tooltip::before,
@@ -19,22 +23,21 @@
 .tooltip::before {
   content: "";
   border: 10px solid transparent;
-  border-bottom-color: #000;
-  top: 1px;
-  left: 16px;
+  border-bottom-color: $color-main;
+  top: 4px;
+  left: 26px;
 }
 /* 吹き出しの本体 */
 .tooltip::after {
   content: attr(data-tooltip);
   // display: block;
-  padding: 7px 13px;
-  background: #000;
-  border-radius: 3px;
-  font-size: 12px;
-  font-weight: 600;
-  color: #fff;
-  top: 20px;
+  top: 24px;
   left: 0;
+  padding: 8px 12px;
+  background: $color-main;
+  border-radius: 3px;
+  font-weight: 600;
+  color: $color-base;
   z-index: 1;
 }
 /* マウスホバーしたときの設定 */
@@ -44,10 +47,10 @@
   visibility: visible;
 }
 .tooltip:hover::before {
-  top: 5px;
+  top: 8px;
 }
 .tooltip:hover::after {
-  top: 24px;
+  top: 28px;
 }
 
 // テキストとツールチップを別要素で管理
@@ -55,33 +58,36 @@
   position: relative;
   cursor: pointer;
   display: inline-block;
-}
-.tooltip1 p {
-  margin: 0;
-  padding: 0;
+  p {
+    margin: 0;
+    // padding: 0;
+    padding: 0 12px;
+    background: $color-accent;
+    color: $color-base;
+    border-radius: 3px;
+  }
 }
 .description1 {
   display: none;
   position: absolute;
-  padding: 10px;
-  font-size: 12px;
+  padding: 8px 12px;
+  // width: 72px;
   line-height: 1.6em;
-  color: #fff;
-  border-radius: 5px;
-  background: #000;
-  width: 100px;
+  color: $color-base;
+  border-radius: 3px;
+  background: $color-main;
 }
 .description1:before {
   content: "";
   position: absolute;
   top: 100%;
-  left: 50%;
-  border: 15px solid transparent;
-  border-top: 15px solid #000;
+  left: 55%;
+  border: 10px solid transparent;
+  border-top: 10px solid $color-main;
   margin-left: -15px;
 }
 .tooltip1:hover .description1 {
   display: inline-block;
-  top: -70px;
-  left: -30px;
+  top: -48px;
+  left: 0px;
 }

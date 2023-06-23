@@ -1,6 +1,9 @@
 @charset "utf-8";
 @use "common" as *;
 
+// TODO: mockup_nav、mockup_screenが今のままだとヘッダー固定されず、画面横スクロールできてしまう状態
+// TODO: スクロールしたときにbtn、mockup-screenがヘッダーの上に来る
+
 // _variables.scssから読み込み
 // $button-size: 50px;
 // $button_span-width: $button-size * 0.6;
@@ -12,7 +15,6 @@
   position: relative;
   width: $button-size;
   height: $button-size;
-  margin: 8px;
   background-color: $color-accent;
   border-radius: $button-size * 0.1;
 }
@@ -183,11 +185,20 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
+  align-items: center;
   margin-bottom: 48px;
   gap: 24px;
-  p {
+  &__text {
+    width: 184px;
     font-size: 16px;
     text-align: center;
+    z-index: $zindex-ham-mock-text;
+  }
+
+  @media screen and (min-width: $breakpoint-tb) {
+    .mockup__text {
+      width: 300px;
+    }
   }
 
   &__container {
@@ -197,20 +208,18 @@
   }
 
   &__screen {
-    z-index: 3;
     width: 294px;
-    // max-height: 90vh;
+    z-index: $zindex-ham-mock-screen;
   }
 
-  &__head {
+  &__header {
     position: absolute;
-    top: 6%;
-    width: 248px;
-    // background-color: $color-base;
+    padding-top: 32px;
+    width: 246px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // margin-bottom: 16px;
+    z-index: $zindex-ham-mock-header;
     &-rogo {
       font-family: $font-title;
       font-size: 11px;
@@ -218,7 +227,6 @@
       text-align: center;
     }
     &-btn {
-      z-index: 4;
       position: relative;
       width: $mu_btn-size;
       height: $mu_btn-size;
@@ -265,35 +273,43 @@
         }
       }
     }
+
     &-nav {
-      z-index: 1;
       position: absolute;
-      top: 120%;
-      right: -60%;
+      top: -8%;
       width: 124px;
       transition: ease 0.4s;
+      z-index: $zindex-ham-mock-nav;
       ul {
         display: flex;
         flex-flow: column;
-        align-items: end;
-        justify-content: center;
-        gap: 11px;
-        font-size: 11px;
-        // text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+        li {
+          display: flex;
+          flex-flow: column;
+          font-size: 11px;
+          .dot-line-l {
+            width: 100px;
+          }
+          .dot-line-s {
+            width: 16px;
+          }
+        }
       }
       &.active {
-        right: 2%;
+        top: 14%;
       }
     }
   }
 
   &__blind {
-    z-index: 2;
     position: absolute;
-    top: 120%;
-    right: -88%;
-    width: 200px;
-    height: 100px;
+    top: -8%;
+    width: 140px;
+    height: 124px;
     background-color: $color-base;
+    z-index: $zindex-ham-mock-blind;
   }
 }

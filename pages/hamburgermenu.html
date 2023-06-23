@@ -10,15 +10,15 @@
     <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
   <body>
-    <header class="head">
+    <header class="header">
       <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
       <nav>
         <!-- sp用ナビメニューのボタン -->
-        <button id="nav_btn" class="head__nav-btn">
+        <button id="nav_btn" class="header__nav-btn">
           <span></span><span></span><span></span>
         </button>
         <!-- tb,pc用ナビメニュー -->
-        <ul id="nav_tb" class="head__nav-tb hide">
+        <ul id="nav_tb" class="header__nav-tb hide">
           <li>このサイトについて</li>
           <li>
             <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
@@ -98,35 +98,46 @@
         </div>
       </section>
       <section class="mockup">
-        <p>実装したときの動き</p>
+        <div class="mockup__text">
+          <p>メニューリストの動きを確認できます。</p>
+        </div>
         <div class="mockup__container">
           <img class="mockup__screen" src="../img/iphone.png" alt="" />
-          <div class="mockup__head">
-            <p class="mockup__head-rogo">Webデザイン<br />パーツ集</p>
+          <div class="mockup__header">
+            <p class="mockup__header-rogo">Webデザイン<br />パーツ集</p>
             <!-- sp用ナビメニューのボタン -->
-            <button id="mockup_btn" class="mockup__head-btn">
+            <button id="mockup_btn" class="mockup__header-btn">
               <span></span><span></span><span></span>
             </button>
-            <!-- sp用ナビメニュー -->
-            <div id="mockup_nav" class="mockup__head-nav">
-              <ul>
-                <li>このサイトについて</li>
-                <li>
-                  <div class="contact-icon"><i class="ai-envelope"></i></div>
-                </li>
-                <li>
-                  <div class="contact-icon">
-                    <i class="ai-twitter-fill"></i>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="mockup__blind"></div>
           </div>
+          <!-- sp用ナビメニュー -->
+          <div id="mockup_nav" class="mockup__header-nav">
+            <ul>
+              <li>
+                <!-- <p>このサイトについて</p> -->
+                このサイトについて
+                <img class="dot-line-l" src="../img/dot-line-long.svg" />
+              </li>
+              <li>
+                <div class="contact-icon"><i class="ai-envelope"></i></div>
+                <img class="dot-line-s" src="../img/dot-line.svg" />
+              </li>
+              <li>
+                <div class="contact-icon">
+                  <i class="ai-twitter-fill"></i>
+                </div>
+                <img class="dot-line-s" src="../img/dot-line.svg" />
+              </li>
+            </ul>
+          </div>
+          <div class="mockup__blind"></div>
         </div>
       </section>
-
-      <a class="home-icon" href="../index.html"><i class="ai-home-alt1"></i></a>
+      <div class="back">
+        <a class="home-icon" href="../index.html"
+          ><i class="ai-home-alt1"></i
+        ></a>
+      </div>
     </main>
     <footer></footer>
     <script src="../js/common.js"></script>

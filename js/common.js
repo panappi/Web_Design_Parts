@@ -1,3 +1,4 @@
+// TODO: 表記を統一する
 const nav_btn = document.getElementById("nav_btn");
 const nav_tb = document.getElementById("nav_tb");
 const nav_sp = document.getElementById("nav_sp");

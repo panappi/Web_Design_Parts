@@ -10,15 +10,15 @@
     <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
   <body>
-    <header class="head">
+    <header class="header">
       <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
       <nav>
         <!-- sp用ナビメニューのボタン -->
-        <button id="nav_btn" class="head__nav-btn">
+        <button id="nav_btn" class="header__nav-btn">
           <span></span><span></span><span></span>
         </button>
         <!-- tb,pc用ナビメニュー -->
-        <ul id="nav_tb" class="head__nav-tb hide">
+        <ul id="nav_tb" class="header__nav-tb hide">
           <li>このサイトについて</li>
           <li>
             <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
@@ -61,7 +61,6 @@
           <img src="../img/dot-green.svg" />
           <h2>アコーディオンメニュー</h2>
         </div>
-        <!-- TODO: 別クラスを準備する -->
         <div class="contents__container-2">
           <div class="contents__item-2">
             <h3>複数項目を同時に開示可能<br />※CSSのみで実装</h3>
@@ -126,8 +125,11 @@
           </div>
         </div>
       </section>
-
-      <a class="home-icon" href="../index.html"><i class="ai-home-alt1"></i></a>
+      <div class="back">
+        <a class="home-icon" href="../index.html"
+          ><i class="ai-home-alt1"></i
+        ></a>
+      </div>
     </main>
     <footer></footer>
     <script src="../js/common.js"></script>

@@ -32,7 +32,7 @@
     // display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    // width: 140 * 3+40 * 2px; // TODO: 表記これで合ってる？
+    // width: 140 * 3+40 * 2px;
     // margin: 0 auto;
     // gap: 40px;
     .contents__item-2 {
@@ -49,7 +49,7 @@
     // display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    // width: 160 * 4+40 * 3px; // TODO: 表記これで合ってる？
+    // width: 160 * 4+40 * 3px;
     // margin: 0 auto;
     // gap: 40px;
     .contents__item-2 {
@@ -80,7 +80,7 @@
     line-height: 1;
     color: #fff;
     background: $color-accent;
-    cursor: pointer; // TODO: aタグにも使える？
+    cursor: pointer;
     &:hover {
       background: $color-main;
       transition: all 0.5s;

@@ -7,13 +7,25 @@ $color-accent: #539165;
 $breakpoint-pc: 960px;
 $breakpoint-tb: 744px;
 
+// TODO: すべての数値を確認してまとめる
+// z-index
+$zindex-ham-mock-nav: 510;
+$zindex-ham-mock-blind: 520;
+$zindex-ham-mock-text: 530;
+$zindex-ham-mock-screen: 540;
+$zindex-ham-mock-header: 550;
+$zindex-header: 1000;
+$zindex-loading: 1050;
+$zindex-grayout: 1100;
+$zindex-modal: 1200;
+
 // ハンバーガーメニューボタン
-// 全ページのheadにて使用
+// 全ページのheaderにて使用
 $nav_btn-size: 32px;
 $nav_btn_span-width: $nav_btn-size * 0.6;
 $nav_btn_span-height: 2px;
 $nav_btn_span-gap: 4px;
-// hamburegrmenuにて使用
+// hamburegrmenuページにて使用
 // contents
 $button-size: 50px;
 $button_span-width: $button-size * 0.6;
