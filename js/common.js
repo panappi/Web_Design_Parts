@@ -1,5 +1,6 @@
 // TODO: 表記を統一する
 // sp用のハンバーガーメニュー
+const body = document.getElementById("body");
 const nav_btn = document.getElementById("nav_btn");
 const nav_tb = document.getElementById("nav_tb");
 const nav_sp = document.getElementById("nav_sp");
@@ -24,6 +25,9 @@ const toggleNav = (e) => {
     toggleHide(nav_tb), toggleHide(nav_btn);
   }
 };
+const toggleOverflow = () => {
+  body.classList.toggle("scroll-off");
+};
 
 // 画面サイズに合わせてナビメニューの表示を切り替える
 // ページを読み込んだときに実行(744px以上の場合sp用からtb用に切り替える)
@@ -35,6 +39,5 @@ breakpointTb.addEventListener("change", toggleNav);
 
 // sp用ナビメニューリストの表示・非表示、ボタンのスタイルを切り替える
 nav_btn.addEventListener("click", () => {
-  // toggleActive(nav_sp), toggleActive(nav_btn), toggleHide(grayout);
-  toggleActive(nav_sp), toggleActive(nav_btn);
+  toggleActive(nav_sp), toggleActive(nav_btn), toggleOverflow();
 });

@@ -1,5 +1,5 @@
 // ボタンを押すと表示されるウィンドウ
-const body = document.getElementById("body");
+// const body = document.getElementById("body");  // common.jsで定義済み
 const grayout_modal = document.getElementById("grayout_modal");
 const window_modal_1 = document.getElementById("window_modal_1");
 const btn1 = document.getElementById("btn-1");
@@ -19,4 +19,3 @@ const closeModal = () => {
 btn1.addEventListener("click", () => openModal());
 btn2.addEventListener("click", () => closeModal());
 btn3.addEventListener("click", () => closeModal());
-// grayout_modal.addEventListener("click", () => closeModal());

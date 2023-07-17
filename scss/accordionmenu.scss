@@ -1,10 +1,8 @@
 @charset "utf-8";
-// @use "style";
 @use "common" as *;
 
 .contents__container-2 {
   display: flex;
-  // flex-flow: column;
   flex-flow: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -19,26 +17,19 @@
   padding: 10px;
   gap: 8px;
   width: 240px;
-  // height: 240px;
   height: auto;
   font-size: 12px;
   border-radius: 10px;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
-  // transition: 0.5s;
 }
 
 @media screen and (min-width: $breakpoint-tb) {
   .contents__container-2 {
-    // display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    // width: 140 * 3+40 * 2px;
-    // margin: 0 auto;
-    // gap: 40px;
     .contents__item-2 {
       padding: 16px;
       width: 360px;
-      // height: 140px;
       font-size: 14px;
     }
   }
@@ -46,27 +37,22 @@
 
 @media screen and (min-width: $breakpoint-pc) {
   .contents__container-2 {
-    // display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    // width: 160 * 4+40 * 3px;
-    // margin: 0 auto;
-    // gap: 40px;
     .contents__item-2 {
       padding: 24px;
       width: 400px;
-      // height: 160px;
       font-size: 16px;
     }
   }
 }
 
+// TODO: hoverのsp対策が必要
 // cssのみで実装
 .menu {
   display: flex;
   flex-flow: column;
   gap: 4px;
-  // width: 216px;
   text-align: left;
   li {
     width: 216px;

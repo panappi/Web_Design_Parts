@@ -37,13 +37,11 @@
   /* 吹き出しの本体 */
   &::after {
     content: attr(data-tooltip);
-    // display: block;
     top: 24px;
     left: 0;
     padding: 8px 12px;
     background: $color-main;
     border-radius: 3px;
-    font-weight: 600;
     color: $color-base;
     z-index: 1;
   }

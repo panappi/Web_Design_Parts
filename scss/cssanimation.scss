@@ -10,6 +10,7 @@
   cursor: pointer;
 }
 
+// TODO: spではタップすれば確認できるが、再タップでは元に戻らない
 .text-1 {
   color: $color-accent;
   &:hover {

@@ -1,5 +1,5 @@
 // リンクを押すと表示れるウィンドウ
-const body = document.getElementById("body");
+// const body = document.getElementById("body");  // common.jsで定義済み
 const grayout_modal = document.getElementById("grayout_modal");
 const window_modal_2 = document.getElementById("window_modal_2");
 const btn_cancel = document.getElementById("btn_cancel");

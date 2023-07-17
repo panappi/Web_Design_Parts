@@ -26,6 +26,11 @@ button {
   display: none !important;
 }
 
+// TODO: スクロールだけでなくクリックも無効にする？
+.scroll-off {
+  overflow: hidden;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -97,6 +102,7 @@ button {
   right: -100%;
   width: 232px;
   transition: ease 0.4s;
+  // TODO: spで確認すると画像が荒い
   background-image: url(../img/dot-bg.svg);
   background-blend-mode: lighten;
   background-repeat: no-repeat;
@@ -226,6 +232,7 @@ button {
 
 .footer {
   margin-top: 124px;
+  padding: 4%;
   display: flex;
   justify-content: center;
   ul {
