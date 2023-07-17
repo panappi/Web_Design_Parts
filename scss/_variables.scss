@@ -7,13 +7,13 @@ $color-accent: #539165;
 $breakpoint-pc: 960px;
 $breakpoint-tb: 744px;
 
-// TODO: すべての数値を確認してまとめる
 // z-index
 $zindex-ham-mock-nav: 510;
 $zindex-ham-mock-blind: 520;
 $zindex-ham-mock-text: 530;
 $zindex-ham-mock-screen: 540;
 $zindex-ham-mock-header: 550;
+$zindex-nav: 900;
 $zindex-header: 1000;
 $zindex-loading: 1050;
 $zindex-grayout: 1100;

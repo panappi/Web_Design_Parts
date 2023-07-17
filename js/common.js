@@ -1,4 +1,5 @@
 // TODO: 表記を統一する
+// sp用のハンバーガーメニュー
 const nav_btn = document.getElementById("nav_btn");
 const nav_tb = document.getElementById("nav_tb");
 const nav_sp = document.getElementById("nav_sp");
@@ -34,5 +35,6 @@ breakpointTb.addEventListener("change", toggleNav);
 
 // sp用ナビメニューリストの表示・非表示、ボタンのスタイルを切り替える
 nav_btn.addEventListener("click", () => {
+  // toggleActive(nav_sp), toggleActive(nav_btn), toggleHide(grayout);
   toggleActive(nav_sp), toggleActive(nav_btn);
 });

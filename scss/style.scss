@@ -23,15 +23,15 @@
   color: $color-base;
 }
 
-.footer {
-  margin-top: 128px;
-  display: flex;
-  justify-content: center;
-  ul {
-    display: flex;
-    gap: 16px;
-  }
-}
+// .footer {
+//   margin-top: 128px;
+//   display: flex;
+//   justify-content: center;
+//   ul {
+//     display: flex;
+//     gap: 16px;
+//   }
+// }
 
 @media screen and (min-width: $breakpoint-tb) {
   .top {

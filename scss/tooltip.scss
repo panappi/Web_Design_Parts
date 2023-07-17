@@ -1,93 +1,99 @@
 @charset "utf-8";
-// @use "style";
 @use "common" as *;
 
-// カスタムデータ属性を使用
-.tooltip {
-  position: relative;
-  cursor: pointer;
-  padding: 0 12px;
+// title属性を使用
+.tooltip-1 {
+  padding: 2px 12px;
   background: $color-accent;
   color: $color-base;
   border-radius: 3px;
+  cursor: pointer;
 }
-/* ツールチップ全体の設定 */
-.tooltip::before,
-.tooltip::after {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s;
-}
-/* 吹き出しのひげ部分 */
-.tooltip::before {
-  content: "";
-  border: 10px solid transparent;
-  border-bottom-color: $color-main;
-  top: 4px;
-  left: 26px;
-}
-/* 吹き出しの本体 */
-.tooltip::after {
-  content: attr(data-tooltip);
-  // display: block;
-  top: 24px;
-  left: 0;
-  padding: 8px 12px;
-  background: $color-main;
-  border-radius: 3px;
-  font-weight: 600;
+
+// カスタムデータ属性を使用
+.tooltip-2 {
+  position: relative;
+  padding: 2px 12px;
+  background: $color-accent;
   color: $color-base;
-  z-index: 1;
-}
-/* マウスホバーしたときの設定 */
-.tooltip:hover::before,
-.tooltip:hover::after {
-  opacity: 1;
-  visibility: visible;
-}
-.tooltip:hover::before {
-  top: 8px;
-}
-.tooltip:hover::after {
-  top: 28px;
+  border-radius: 3px;
+  cursor: pointer;
+  /* ツールチップ全体の設定 */
+  &::before,
+  &::after {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+  /* 吹き出しのひげ部分 */
+  &::before {
+    content: "";
+    border: 10px solid transparent;
+    border-bottom-color: $color-main;
+    top: 4px;
+    left: 37%;
+  }
+  /* 吹き出しの本体 */
+  &::after {
+    content: attr(data-tooltip);
+    // display: block;
+    top: 24px;
+    left: 0;
+    padding: 8px 12px;
+    background: $color-main;
+    border-radius: 3px;
+    font-weight: 600;
+    color: $color-base;
+    z-index: 1;
+  }
+  /* マウスホバーしたときの設定 */
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+  &:hover::before {
+    top: 14px;
+  }
+  &:hover::after {
+    top: 34px;
+  }
 }
 
 // テキストとツールチップを別要素で管理
-.tooltip1 {
+.tooltip-3 {
   position: relative;
-  cursor: pointer;
   display: inline-block;
+  cursor: pointer;
   p {
     margin: 0;
-    // padding: 0;
-    padding: 0 12px;
+    padding: 2px 12px;
     background: $color-accent;
     color: $color-base;
     border-radius: 3px;
+  }
+  &:hover .description1 {
+    display: inline-block;
+    top: -48px;
+    left: 0px;
   }
 }
 .description1 {
   display: none;
   position: absolute;
   padding: 8px 12px;
-  // width: 72px;
   line-height: 1.6em;
   color: $color-base;
   border-radius: 3px;
   background: $color-main;
-}
-.description1:before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 55%;
-  border: 10px solid transparent;
-  border-top: 10px solid $color-main;
-  margin-left: -15px;
-}
-.tooltip1:hover .description1 {
-  display: inline-block;
-  top: -48px;
-  left: 0px;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 55%;
+    border: 10px solid transparent;
+    border-top: 10px solid $color-main;
+    margin-left: -15px;
+  }
 }

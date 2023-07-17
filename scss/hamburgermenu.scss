@@ -1,9 +1,6 @@
 @charset "utf-8";
 @use "common" as *;
 
-// TODO: mockup_nav、mockup_screenが今のままだとヘッダー固定されず、画面横スクロールできてしまう状態
-// TODO: スクロールしたときにbtn、mockup-screenがヘッダーの上に来る
-
 // _variables.scssから読み込み
 // $button-size: 50px;
 // $button_span-width: $button-size * 0.6;
