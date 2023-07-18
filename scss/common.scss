@@ -9,11 +9,11 @@ $font-title: "Kiwi Maru", "ヒラギノ丸ゴ ProN", sans-serif;
 $font-text: "ヒラギノ丸ゴ ProN", sans-serif;
 
 body {
-  // padding: 4%; // TODO: bodyでは指定せず、mainをまとまめるクラスをつくる？
   background-color: $color-base;
   color: $color-main;
   font-family: $font-text;
 }
+
 main {
   padding: 4%;
 }
@@ -149,7 +149,6 @@ button {
   flex-flow: column;
   margin: 48px 0;
   gap: 40px;
-
   &__title {
     display: flex;
     padding: 0 4%;
@@ -163,12 +162,10 @@ button {
       font-size: 18px;
     }
   }
-
   &__text {
     padding: 0 8%;
     font-size: 14px;
   }
-
   &__container {
     // display: grid;
     // grid-template-columns: repeat(2, 100px);
@@ -182,7 +179,6 @@ button {
     margin: 0 auto;
     gap: 40px;
   }
-
   &__item {
     display: grid;
     place-items: center;
