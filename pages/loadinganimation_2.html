@@ -11,16 +11,16 @@
   </head>
   <body id="body" class="position-relative">
     <!-- ローディング画面の白背景 -->
-    <div id="loading_bg" class="loading-bg"></div>
+    <div id="loadingBg" class="loading-bg"></div>
     <header class="header">
       <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
       <nav>
         <!-- sp用ナビメニューのボタン -->
-        <button id="nav_btn" class="header__nav-btn">
+        <button id="navBtn" class="header__nav-btn">
           <span></span><span></span><span></span>
         </button>
         <!-- tb,pc用ナビメニュー -->
-        <ul id="nav_tb" class="header__nav-tb hide">
+        <ul id="navTb" class="header__nav-tb hide">
           <li>
             <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
               ><i class="ai-envelope"></i
@@ -38,7 +38,7 @@
       </nav>
     </header>
     <!-- sp用ナビメニュー -->
-    <div id="nav_sp" class="nav-sp">
+    <div id="navSp" class="nav-sp">
       <ul>
         <li><a href="hamburgermenu.html">ハンバーガーメニュー</a></li>
         <li><a href="accordionmenu.html">アコーディオンメニュー</a></li>
@@ -59,10 +59,8 @@
           <h2>ローディングアニメーション</h2>
         </div>
 
-        <div id="loading_2" class="loading-2">
-          <div class="loading-2__percent">
-            <span id="percent_text"></span>％
-          </div>
+        <div id="loading2" class="loading-2">
+          <div class="loading-2__percent"><span id="percent"></span>％</div>
           <div id="gauge" class="loading-2__gauge"></div>
         </div>
 

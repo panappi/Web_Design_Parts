@@ -1,9 +1,9 @@
 // ページを開くと表示されるアニメーション
 const images = document.getElementsByTagName("img"); // ページ内の画像取得
-const percent = document.getElementById("percent_text"); // パーセントのテキスト部分
+const percent = document.getElementById("percent"); // パーセントのテキスト部分
 const gauge = document.getElementById("gauge"); // ゲージ
-const loading_bg = document.getElementById("loading_bg"); // ローディング背景
-const loading_2 = document.getElementById("loading_2"); // ローディング要素
+const loadingBg = document.getElementById("loadingBg"); // ローディング背景
+const loading2 = document.getElementById("loading2"); // ローディング要素
 const gaugeMax = 400; // ゲージの幅指定
 let imgCount = 0;
 let baseCount = 0;
@@ -40,8 +40,8 @@ const nowLoading = setInterval(() => {
       setTimeout(() => {
         // 100％になってもすぐに消えないようにする
         // ローディング要素の非表示
-        loading_bg.style.display = "none";
-        loading_2.style.display = "none";
+        loadingBg.style.display = "none";
+        loading2.style.display = "none";
         // ローディングの終了
         clearInterval(nowLoading);
       }, 300);

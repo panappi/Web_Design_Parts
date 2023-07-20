@@ -5,38 +5,38 @@
 
 // contents
 // 3本線から✕に変化するボタン-1
-const btn_3x = document.getElementById("btn_3x");
-btn_3x.addEventListener("click", () => {
-  toggleActive(btn_3x);
+const btn3x = document.getElementById("btn3x");
+btn3x.addEventListener("click", () => {
+  toggleActive(btn3x);
 });
 
 // 3本線から✕に変化するボタン-2
-const btn_3x_2 = document.getElementById("btn_3x_2");
-btn_3x_2.addEventListener("click", () => {
-  toggleActive(btn_3x_2);
+const btn3x_2 = document.getElementById("btn3x_2");
+btn3x_2.addEventListener("click", () => {
+  toggleActive(btn3x_2);
 });
 
 // 3本線から✕に変化するボタン-3
-const btn_3x_3 = document.getElementById("btn_3x_3");
-btn_3x_3.addEventListener("click", () => {
-  toggleActive(btn_3x_3);
+const btn3x_3 = document.getElementById("btn3x_3");
+btn3x_3.addEventListener("click", () => {
+  toggleActive(btn3x_3);
 });
 
 // 2本線から✕に変化するボタン
-const btn_2x = document.getElementById("btn_2x");
-btn_2x.addEventListener("click", () => {
-  toggleActive(btn_2x);
+const btn2x = document.getElementById("btn2x");
+btn2x.addEventListener("click", () => {
+  toggleActive(btn2x);
 });
 
 // MENUから✕に変化するボタン
-const btn_mx = document.getElementById("btn_mx");
-btn_mx.addEventListener("click", () => {
-  toggleActive(btn_mx);
+const btnMx = document.getElementById("btnMx");
+btnMx.addEventListener("click", () => {
+  toggleActive(btnMx);
 });
 
 // mockup
-const mockup_btn = document.getElementById("mockup_btn");
-const mockup_nav = document.getElementById("mockup_nav");
-mockup_btn.addEventListener("click", () => {
-  toggleActive(mockup_btn), toggleActive(mockup_nav);
+const mockupBtn = document.getElementById("mockupBtn");
+const mockupNav = document.getElementById("mockupNav");
+mockupBtn.addEventListener("click", () => {
+  toggleActive(mockupBtn), toggleActive(mockupNav);
 });

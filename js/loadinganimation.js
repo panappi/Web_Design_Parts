@@ -1,8 +1,8 @@
 // ボタンを押すと表示されるアニメーション
-const loading_1 = document.getElementById("loading_1");
-const loading_bg = document.getElementById("loading_bg");
-const btn_start = document.getElementById("btn_start");
-const btn_cancel = document.getElementById("btn_cancel");
+const loading1 = document.getElementById("loading1");
+const loadingBg = document.getElementById("loadingBg");
+const btnStart = document.getElementById("btnStart");
+const btnCancel = document.getElementById("btnCancel");
 
 // common.jsから読み込み
 // const toggleActive = (e) => {
@@ -13,13 +13,13 @@ const btn_cancel = document.getElementById("btn_cancel");
 // };
 
 // スタートボタンを押すとローディング画面を表示する
-btn_start.addEventListener("click", () => {
-  toggleActive(loading_1), toggleActive(loading_bg), toggleHide(loading_bg);
+btnStart.addEventListener("click", () => {
+  toggleActive(loading1), toggleActive(loadingBg), toggleHide(loadingBg);
 });
 
 // キャンセルボタンを押すとローディング画面を非表示にする
-btn_cancel.addEventListener("click", () => {
-  toggleActive(loading_1), toggleActive(loading_bg), toggleHide(loading_bg);
+btnCancel.addEventListener("click", () => {
+  toggleActive(loading1), toggleActive(loadingBg), toggleHide(loadingBg);
 });
 
 // ５秒間だけローディング画面を表示する

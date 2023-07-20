@@ -1,9 +1,8 @@
-// TODO: 表記を統一する
 // sp用のハンバーガーメニュー
 const body = document.getElementById("body");
-const nav_btn = document.getElementById("nav_btn");
-const nav_tb = document.getElementById("nav_tb");
-const nav_sp = document.getElementById("nav_sp");
+const navBtn = document.getElementById("navBtn");
+const navTb = document.getElementById("navTb");
+const navSp = document.getElementById("navSp");
 const breakpointTb = window.matchMedia("(min-width: 744px)"); // 744px以上
 
 const toggleActive = (e) => {
@@ -17,12 +16,12 @@ const removeActive = (e) => {
 };
 const toggleNav = (e) => {
   if (e.matches) {
-    toggleHide(nav_tb),
-      toggleHide(nav_btn),
-      removeActive(nav_sp),
-      removeActive(nav_btn);
+    toggleHide(navTb),
+      toggleHide(navBtn),
+      removeActive(navSp),
+      removeActive(navBtn);
   } else {
-    toggleHide(nav_tb), toggleHide(nav_btn);
+    toggleHide(navTb), toggleHide(navBtn);
   }
 };
 const toggleOverflow = () => {
@@ -32,12 +31,12 @@ const toggleOverflow = () => {
 // 画面サイズに合わせてナビメニューの表示を切り替える
 // ページを読み込んだときに実行(744px以上の場合sp用からtb用に切り替える)
 if (breakpointTb.matches) {
-  toggleHide(nav_tb), toggleHide(nav_btn);
+  toggleHide(navTb), toggleHide(navBtn);
 }
 // ウィンドウサイズを変更したときに実行（ブレイクポイントを監視する）
 breakpointTb.addEventListener("change", toggleNav);
 
 // sp用ナビメニューリストの表示・非表示、ボタンのスタイルを切り替える
-nav_btn.addEventListener("click", () => {
-  toggleActive(nav_sp), toggleActive(nav_btn), toggleOverflow();
+navBtn.addEventListener("click", () => {
+  toggleActive(navSp), toggleActive(navBtn), toggleOverflow();
 });
