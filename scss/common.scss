@@ -164,7 +164,7 @@ button {
   }
   &__text {
     padding: 0 8%;
-    font-size: 14px;
+    font-size: 16px;
   }
   &__container {
     // display: grid;
@@ -223,7 +223,16 @@ button {
   display: flex;
   justify-content: flex-end;
   gap: 20px;
-  font-size: 20px;
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: $nav_btn-size * 0.1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 21px;
+  }
 }
 
 .footer {
