@@ -47,7 +47,6 @@
   }
 }
 
-// TODO: spだと項目を開くと閉じても別の項目を開くまでhover時の色が残る
 // cssのみで実装
 .menu {
   display: flex;
@@ -96,15 +95,6 @@
   }
 }
 
-// @media (hover: none) {
-//   .menu {
-//     label:active {
-//       background: $color-main;
-//       transition: all 0.5s;
-//     }
-//   }
-// }
-
 // css・jsで実装
 .menu-2 {
   display: flex;
@@ -148,10 +138,6 @@
       transition: all 0.5s;
     }
   }
-  // button:hover {
-  //   background-color: $color-main;
-  //   transition: all 0.5s;
-  // }
   button::before,
   button::after {
     content: "";
