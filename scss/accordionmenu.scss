@@ -67,10 +67,10 @@
     color: #fff;
     background: $color-accent;
     cursor: pointer;
-    &:hover {
-      background: $color-main;
-      transition: all 0.5s;
-    }
+    // &:hover {
+    //   background: $color-main;
+    //   transition: all 0.5s;
+    // }
   }
   ul {
     padding: 0 16px;
@@ -91,6 +91,23 @@
   #type_2:checked + label,
   #type_3:checked + label {
     background: $color-main;
+  }
+}
+
+@media (hover: hover) {
+  .menu {
+    label:hover {
+      background: $color-main;
+      transition: all 0.5s;
+    }
+  }
+}
+@media (hover: none) {
+  .menu {
+    label:active {
+      background: $color-main;
+      transition: all 0.5s;
+    }
   }
 }
 
