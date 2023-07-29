@@ -1,41 +1,31 @@
 @charset "utf-8";
-@use "style";
+@use "common" as *;
 
-// 変数定義
-$button-size: 50px;
-$button_span-width: $button-size * 0.6;
-$button_span-height: 3px;
-$button_span-gap: 8px;
+// _variables.scssから読み込み
+// $button-size: 50px;
+// $button_span-width: $button-size * 0.6;
+// $button_span-height: 3px;
+// $button_span-gap: 8px;
 
-// 共通スタイル
+// メニュ‐ボタンの共通スタイル
 .btn {
   position: relative;
   width: $button-size;
   height: $button-size;
-  margin: 8px;
-  background-color: style.$color-accent;
+  background-color: $color-accent;
   border-radius: $button-size * 0.1;
-  // span {
-  //   position: absolute;
-  //   left: ($button-size - $button_span-width) * 0.5;
-  //   width: $button_span-width;
-  //   height: $button_span-height;
-  //   background-color: style.$color-base;
-  //   border-radius: $button_span-height;
-  //   transition: ease 0.4s; /*クリック時の動きを遅延*/
-  // }
 }
 
-// 3本線から✗に変化するボタン-1
-.btn_3x {
+// 3本線から✕に変化するボタン-1
+.btn-3x {
   span {
     position: absolute;
     left: ($button-size - $button_span-width) * 0.5;
     width: $button_span-width;
     height: $button_span-height;
-    background-color: style.$color-base;
+    background-color: $color-base;
     border-radius: $button_span-height;
-    transition: ease 0.4s; /*クリック時の動きを遅延*/
+    transition: ease 0.4s;
   }
   span:nth-of-type(1) {
     top: ($button-size - $button_span-height * 3 - $button_span-gap * 2) * 0.5;
@@ -50,7 +40,7 @@ $button_span-gap: 8px;
   }
 }
 // 動作後のスタイル
-.btn_3x.active {
+.btn-3x-1.active {
   span:nth-of-type(1) {
     top: $button-size * 0.5;
     transform: rotate(45deg);
@@ -64,9 +54,9 @@ $button_span-gap: 8px;
   }
 }
 
-// 3本線から✗に変化するボタン-2
+// 3本線から✕に変化するボタン-2
 // 動作後のスタイル
-.btn_3x_2.active {
+.btn-3x-2.active {
   span:nth-of-type(1) {
     top: $button-size * 0.5;
     transform: rotate(45deg);
@@ -81,58 +71,88 @@ $button_span-gap: 8px;
   }
 }
 
-// 2本線から✗に変化するボタン
-.btn_2x {
+// 3本線から✕に変化するボタン-3
+// 動作後のスタイル
+.btn-3x-3.active {
+  span:nth-of-type(1) {
+    top: $button-size * 0.5;
+    transform: rotate(405deg);
+  }
+  span:nth-of-type(2) {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+  span:nth-of-type(3) {
+    top: $button-size * 0.5;
+    transform: rotate(495deg);
+  }
+}
+
+// 2本線から✕に変化するボタン
+.btn-2x {
   span {
     position: absolute;
-    left: ($button-size - $button_span-width) * 0.5;
-    width: $button_span-width;
     height: $button_span-height;
-    background-color: style.$color-base;
+    background-color: $color-base;
     border-radius: $button_span-height;
-    transition: ease 0.4s; /*クリック時の動きを遅延*/
+    transition: ease 0.4s;
   }
   span:nth-of-type(1) {
     top: ($button-size - $button_span-height * 2 - $button_span-gap) * 0.5;
+    right: ($button-size - $button_span-width) * 0.5;
+    width: $button_span-width;
   }
   span:nth-of-type(2) {
     top: ($button-size - $button_span-height * 2 - $button_span-gap) * 0.5 +
       $button_span-height + $button_span-gap;
+    right: ($button-size - $button_span-width) * 0.5;
+    width: $button_span-width * 0.7;
   }
 }
 // 動作後のスタイル
-.btn_2x.active {
+.btn-2x.active {
   span:nth-of-type(1) {
     top: $button-size * 0.5;
     transform: rotate(45deg);
   }
   span:nth-of-type(2) {
     top: $button-size * 0.5;
+    width: $button_span-width;
     transform: rotate(-45deg);
   }
 }
 
-// MENUから✗に変化
-.btn_mx {
+// MENUから✕に変化
+.btn-mx {
+  div {
+    opacity: 0;
+    position: absolute;
+    top: ($button-size - $button_span-height * 3 - $button_span-gap * 2) * 0.5 -
+      8;
+    left: ($button-size - 34.45) * 0.5;
+    font-size: 10px;
+    color: $color-base;
+    transition: ease 0.4s;
+  }
   span {
     position: absolute;
     left: ($button-size - $button_span-width) * 0.5;
-    transition: ease 0.4s; /*クリック時の動きを遅延*/
+    transition: ease 0.4s;
   }
   span:nth-of-type(1),
   span:nth-of-type(3) {
     width: $button_span-width;
     height: $button_span-height;
-    background-color: style.$color-base;
+    background-color: $color-base;
     border-radius: $button_span-height;
   }
   span:nth-of-type(1) {
     top: ($button-size - $button_span-height * 3 - $button_span-gap * 2) * 0.5;
   }
   span:nth-of-type(2) {
-    color: style.$color-base;
-    top: $button-size * 0.5 - 6px;
-    font-size: 6px;
+    color: $color-base;
+    top: $button-size * 0.5 - 8;
+    font-size: 10px;
     text-transform: uppercase;
   }
   span:nth-of-type(3) {
@@ -141,16 +161,152 @@ $button_span-gap: 8px;
   }
 }
 // 動作後のスタイル
-.btn_mx.active {
+.btn-mx.active {
+  div {
+    opacity: 1;
+  }
   span:nth-of-type(1) {
-    top: $button-size * 0.5;
+    top: $button-size * 0.5 + 5;
     transform: rotate(45deg);
   }
   span:nth-of-type(2) {
     opacity: 0;
   }
   span:nth-of-type(3) {
-    top: $button-size * 0.5;
+    top: $button-size * 0.5 + 5;
     transform: rotate(-45deg);
+  }
+}
+
+.mockup {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+  gap: 24px;
+  &__text {
+    width: 184px;
+    font-size: 16px;
+    text-align: center;
+    z-index: $zindex-ham-mock-text;
+  }
+
+  @media screen and (min-width: $breakpoint-tb) {
+    .mockup__text {
+      width: 300px;
+    }
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__screen {
+    width: 294px;
+    z-index: $zindex-ham-mock-screen;
+  }
+
+  &__header {
+    position: absolute;
+    padding-top: 32px;
+    width: 246px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: $zindex-ham-mock-header;
+    &-rogo {
+      font-family: $font-title;
+      font-size: 11px;
+      font-weight: bold;
+      text-align: center;
+    }
+    &-btn {
+      position: relative;
+      width: $mu_btn-size;
+      height: $mu_btn-size;
+      border-radius: $mu_btn-size * 0.1;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      span {
+        position: absolute;
+        left: ($mu_btn-size - $mu_btn_span-width) * 0.5;
+        width: $mu_btn_span-width;
+        height: $mu_btn_span-height;
+        background-color: $color-main;
+        border-radius: $mu_btn_span-height;
+        transition: ease 0.4s;
+      }
+      span:nth-of-type(1) {
+        top: ($mu_btn-size - $mu_btn_span-height * 3 - $mu_btn_span-gap * 2) *
+          0.5;
+      }
+      span:nth-of-type(2) {
+        top: (
+            ($mu_btn-size - $mu_btn_span-height * 3 - $mu_btn_span-gap * 2) *
+              0.5
+          ) + $mu_btn_span-height + $mu_btn_span-gap;
+      }
+      span:nth-of-type(3) {
+        top: (
+            ($mu_btn-size - $mu_btn_span-height * 3 - $mu_btn_span-gap * 2) *
+              0.5
+          ) + $mu_btn_span-height * 2 + $mu_btn_span-gap * 2;
+      }
+      // 動作後のスタイル
+      &.active {
+        span:nth-of-type(1) {
+          top: $mu_btn-size * 0.5;
+          transform: rotate(405deg);
+        }
+        span:nth-of-type(2) {
+          transform: rotate(360deg);
+          opacity: 0;
+        }
+        span:nth-of-type(3) {
+          top: $mu_btn-size * 0.5;
+          transform: rotate(495deg);
+        }
+      }
+    }
+
+    &-nav {
+      position: absolute;
+      top: -8%;
+      width: 124px;
+      transition: ease 0.4s;
+      z-index: $zindex-ham-mock-nav;
+      ul {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        gap: 6px;
+        li {
+          display: flex;
+          flex-flow: column;
+          font-size: 11px;
+          .dot-line-l {
+            width: 100px;
+          }
+          .dot-line-s {
+            width: 16px;
+          }
+        }
+      }
+      &.active {
+        top: 14%;
+      }
+    }
+  }
+
+  &__blind {
+    position: absolute;
+    top: -8%;
+    width: 140px;
+    height: 124px;
+    background-color: $color-base;
+    z-index: $zindex-ham-mock-blind;
   }
 }

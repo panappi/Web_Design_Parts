@@ -1,0 +1,247 @@
+@charset "utf-8";
+@use "variables" as *;
+@forward "variables";
+
+// 使用フォント
+//// キウイ丸
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap");
+$font-title: "Kiwi Maru", "ヒラギノ丸ゴ ProN", sans-serif;
+$font-text: "ヒラギノ丸ゴ ProN", sans-serif;
+
+body {
+  background-color: $color-base;
+  color: $color-main;
+  font-family: $font-text;
+}
+
+main {
+  padding: 4%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hide {
+  display: none !important;
+}
+
+// TODO: スクロールだけでなくクリックも無効にする？
+.scroll-off {
+  overflow: hidden;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 2% 4%;
+  background-color: $color-base;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: $zindex-header;
+  // sp用ナビメニューのボタン
+  &__nav-btn {
+    position: relative;
+    width: $nav_btn-size;
+    height: $nav_btn-size;
+    border-radius: $nav_btn-size * 0.1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    span {
+      position: absolute;
+      left: ($nav_btn-size - $nav_btn_span-width) * 0.5;
+      width: $nav_btn_span-width;
+      height: $nav_btn_span-height;
+      background-color: $color-main;
+      border-radius: $nav_btn_span-height;
+      transition: ease 0.4s;
+    }
+    span:nth-of-type(1) {
+      top: ($nav_btn-size - $nav_btn_span-height * 3 - $nav_btn_span-gap * 2) *
+        0.5;
+    }
+    span:nth-of-type(2) {
+      top: (
+          ($nav_btn-size - $nav_btn_span-height * 3 - $nav_btn_span-gap * 2) *
+            0.5
+        ) + $nav_btn_span-height + $nav_btn_span-gap;
+    }
+    span:nth-of-type(3) {
+      top: (
+          ($nav_btn-size - $nav_btn_span-height * 3 - $nav_btn_span-gap * 2) *
+            0.5
+        ) + $nav_btn_span-height * 2 + $nav_btn_span-gap * 2;
+    }
+    // 動作後のスタイル
+    &.active {
+      span:nth-of-type(1) {
+        top: $nav_btn-size * 0.5;
+        transform: rotate(405deg);
+      }
+      span:nth-of-type(2) {
+        transform: rotate(360deg);
+        opacity: 0;
+      }
+      span:nth-of-type(3) {
+        top: $nav_btn-size * 0.5;
+        transform: rotate(495deg);
+      }
+    }
+  }
+  // tb,pc用ナビメニュー
+  &__nav-tb {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+// sp用ナビメニュー
+.nav-sp {
+  position: fixed;
+  right: -100%;
+  width: 232px;
+  transition: ease 0.4s;
+  // TODO: spで確認すると画像が荒い
+  background-image: url(../img/dot-bg.svg);
+  background-blend-mode: lighten;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  z-index: $zindex-nav;
+  ul {
+    padding: 24px 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    font-size: 14px;
+    li {
+      padding: 1px 2px;
+      width: 72%;
+      background-color: rgba(248, 245, 228, 0.8);
+      box-shadow: 0 0 4px rgba(248, 245, 228, 1);
+      border-radius: 24px;
+      text-shadow: 0 -1px 4px $color-base, 1px 0 4px $color-base,
+        0 1px 4px $color-base, -1px 0 4px $color-base;
+    }
+  }
+  &.active {
+    right: 4%;
+  }
+}
+
+.rogo {
+  font-family: $font-title;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact-icon {
+  font-size: 16px;
+}
+
+.contents {
+  display: flex;
+  flex-flow: column;
+  margin: 48px 0;
+  gap: 40px;
+  &__title {
+    display: flex;
+    padding: 0 4%;
+    gap: 8px;
+    align-items: center;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+  }
+  &__text {
+    padding: 0 8%;
+    font-size: 16px;
+  }
+  &__container {
+    // display: grid;
+    // grid-template-columns: repeat(2, 100px);
+    // grid-template-rows: repeat(3, 100px);
+    // justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    // TODO: 240px以下を考慮する必要ある？
+    // max-width: 100px * 2+40px * 1;
+    width: 100px * 2+40px * 1;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  &__item {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 6px;
+    width: 100px;
+    height: 100px;
+    font-size: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+  }
+}
+
+@media screen and (min-width: $breakpoint-tb) {
+  .contents__container {
+    // max-width: 140px * 3+40px * 2;
+    width: 140px * 3+40px * 2;
+    .contents__item {
+      padding: 16px;
+      width: 140px;
+      height: 140px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-pc) {
+  .contents__container {
+    // max-width: 160px * 4+40px * 3;
+    width: 160px * 4+40px * 3;
+    .contents__item {
+      padding: 24px;
+      width: 160px;
+      height: 160px;
+      font-size: 16px;
+    }
+  }
+}
+
+.back {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: $nav_btn-size * 0.1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-size: 21px;
+  }
+}
+
+.footer {
+  margin-top: 124px;
+  padding: 4%;
+  display: flex;
+  justify-content: center;
+  ul {
+    display: flex;
+    gap: 16px;
+  }
+}

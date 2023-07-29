@@ -1,77 +1,108 @@
 @charset "utf-8";
-@use "style";
+@use "common" as *;
 
 .position-relative {
   position: relative;
 }
 
-// ページを開くと表示される画面
-#loadingBg {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: auto;
-  min-width: 100%;
-  height: auto;
-  min-height: 100%;
-  background: #ffffff;
-  opacity: 0.6;
-}
-#loading {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 440px;
-  padding: 50px 20px;
-  background: #ffffff;
-}
-#loading #percent {
-  margin-bottom: 5px;
-  text-align: center;
-  font-size: 16px;
-}
-#loading #gauge {
-  width: 0px;
-  height: 5px;
-  background: style.$color-accent;
+.btn-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  color: $color-base;
+  background-color: $color-accent;
+  border-radius: 32px * 0.5;
 }
 
-// ボタンを押すと表示される画面
-#loading-2 {
+.loading-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  // display: none; // hideクラスで非表示にする
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  opacity: 0.6;
+  z-index: $zindex-loading - 10;
+  &.active {
+    display: flex;
+    animation: appear-pale 1s ease;
+  }
+}
+
+// ボタンを押すと表示されるアニメーション
+.loading-1 {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  // display: flex;     /* activeで指定 */
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 16px;
-  transition: all 1s;
-  background-color: #0bd;
-  z-index: 9999;
-  display: none;
-
+  gap: 24px;
+  z-index: $zindex-loading;
+  &__btn-cancel {
+    position: absolute;
+    top: 24%;
+    right: 20%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-accent;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: $color-base;
+    font-size: 22px;
+  }
+  &__dots {
+    display: flex;
+    gap: 4px;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  // ローディング画面
   &.active {
     display: flex;
     animation: appear 1s ease;
+    img:nth-of-type(1) {
+      animation: jump 2s infinite;
+    }
+    img:nth-of-type(2) {
+      animation: jump 2s infinite 0.33s;
+    }
+    img:nth-of-type(3) {
+      animation: jump 2s infinite 0.66s;
+    }
+    img:nth-of-type(4) {
+      animation: jump 2s infinite 0.99s;
+    }
+    img:nth-of-type(5) {
+      animation: jump 2s infinite 1.32s;
+    }
+    img:nth-of-type(6) {
+      animation: jump 2s infinite 1.65s;
+    }
   }
-}
-.spinner {
-  width: 100px;
-  height: 100px;
-  background-color: #fff;
-  border-radius: 100%;
-  animation: scaleout 1s infinite ease-in-out;
-}
-button {
-  border: solid 1px style.$color-main;
-  border-radius: 5px;
 }
 
 // アニメーション
+@keyframes appear-pale {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
 @keyframes appear {
   0% {
     opacity: 0;
@@ -80,12 +111,50 @@ button {
     opacity: 1;
   }
 }
-@keyframes scaleout {
+@keyframes jump {
   0% {
-    transform: scale(0);
+    transform: translateY(0px);
+  }
+  8% {
+    transform: translateY(-10px);
+  }
+  16% {
+    transform: translateY(0px);
   }
   100% {
-    transform: scale(1);
-    opacity: 0;
+    transform: translateY(0px);
+  }
+}
+
+// ページを開くと表示されるアニメーション
+.loading-2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 440px;
+  padding: 50px 20px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: $zindex-loading;
+  &__percent {
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 16px;
+  }
+  &__gauge {
+    width: 0px;
+    height: 5px;
+    background: $color-accent;
+  }
+}
+.img-loading {
+  padding: 0 21%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 16px;
+  p {
+    font-size: 16px;
   }
 }

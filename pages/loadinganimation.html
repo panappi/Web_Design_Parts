@@ -7,37 +7,107 @@
     <title>Loading animation</title>
     <link rel="stylesheet" href="../css/libs/reset.css" />
     <link rel="stylesheet" href="../css/loadinganimation.css" />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
-  <body class="position-relative">
-    <!-- ●ページを開くと表示される画面 -->
-    <!-- ローディング状況を数値とゲージで表示 -->
-    <div id="loadingBg"></div>
-    <div id="loading">
-      <div id="percent"><span id="percent-text"></span>％</div>
-      <div id="gauge"></div>
+  <body id="body">
+    <!-- ローディング画面の白背景 -->
+    <div id="loadingBg" class="loading-bg hide"></div>
+    <header class="header">
+      <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
+      <nav>
+        <!-- sp用ナビメニューのボタン -->
+        <button id="navBtn" class="header__nav-btn">
+          <span></span><span></span><span></span>
+        </button>
+        <!-- tb,pc用ナビメニュー -->
+        <ul id="navTb" class="header__nav-tb hide">
+          <li>
+            <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
+              ><i class="ai-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="contact-icon"
+              href="https://twitter.com/panappi_02tk"
+              target="_blank"
+              ><i class="ai-twitter-fill"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- sp用ナビメニュー -->
+    <div id="navSp" class="nav-sp">
+      <ul>
+        <li><a href="hamburgermenu.html">ハンバーガーメニュー</a></li>
+        <li><a href="accordionmenu.html">アコーディオンメニュー</a></li>
+        <li><a href="modalwindow.html">モーダルウィンドウ</a></li>
+        <li><a href="tooltip.html">ツールチップ</a></li>
+        <li>
+          <a href="loadinganimation.html">ローディング<br />アニメーション</a>
+        </li>
+        <li>
+          <a href="cssanimation.html">その他のCSS<br />アニメーション</a>
+        </li>
+      </ul>
     </div>
-    <header></header>
     <main>
-      <h2>ローディングアニメーション</h2>
-      <div>
-        <h3>●ボタンを押すと表示される画面</h3>
-        <div id="loading-2">
-          <div class="spinner"></div>
-          <button id="btn-cancel">CANCEL</button>
+      <section class="contents">
+        <div class="contents__title">
+          <img src="../img/dot-green.svg" />
+          <h2>ローディングアニメーション</h2>
         </div>
-        <button id="btn-start">START</button><br />
+        <div class="contents__container">
+          <div class="contents__item">
+            <h3>ボタンを押すと表示</h3>
+            <div id="loading1" class="loading-1">
+              <button id="btnCancel" class="loading-1__btn-cancel">
+                <i class="ai-cross"></i>
+              </button>
+              <div class="loading-1__dots">
+                <img src="../img/dot-green.svg" />
+                <img src="../img/dot-yellow.svg" />
+                <img src="../img/dot-blue.svg" />
+                <img src="../img/dot-green.svg" />
+                <img src="../img/dot-yellow.svg" />
+                <img src="../img/dot-blue.svg" />
+              </div>
+            </div>
+            <button id="btnStart" class="btn-loading">!</button>
+          </div>
+          <div class="contents__item">
+            <h3>ページを開くと表示</h3>
+            <a href="./loadinganimation_2.html" class="btn-loading"
+              ><i class="ai-link-chain"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+      <div class="back">
+        <a class="home-icon back__btn" href="../index.html"
+          ><i class="ai-home-alt1"></i
+        ></a>
       </div>
-
-      <div>
-        <h3>●ローディング用画像</h3>
-        <img src="../img/spring.jpeg" alt="菜の花" />
-        <img src="../img/summer.jpeg" alt="海" />
-        <img src="../img/autumn.jpeg" alt="紅葉" />
-        <img src="../img/winter.jpg" alt="スキー場" />
-      </div>
-      <a href="../index.html">ホームに戻る</a>
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <ul>
+        <li>
+          <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
+            ><i class="ai-envelope"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="contact-icon"
+            href="https://twitter.com/panappi_02tk"
+            target="_blank"
+            ><i class="ai-twitter-fill"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../js/common.js"></script>
     <script src="../js/loadinganimation.js"></script>
   </body>
 </html>

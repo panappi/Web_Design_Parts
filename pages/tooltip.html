@@ -7,34 +7,100 @@
     <title>Tooltip</title>
     <link rel="stylesheet" href="../css/libs/reset.css" />
     <link rel="stylesheet" href="../css/tooltip.css" />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
-  <body>
-    <header></header>
+  <body id="body">
+    <header class="header">
+      <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
+      <nav>
+        <!-- sp用ナビメニューのボタン -->
+        <button id="navBtn" class="header__nav-btn">
+          <span></span><span></span><span></span>
+        </button>
+        <!-- tb,pc用ナビメニュー -->
+        <ul id="navTb" class="header__nav-tb hide">
+          <li>
+            <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
+              ><i class="ai-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="contact-icon"
+              href="https://twitter.com/panappi_02tk"
+              target="_blank"
+              ><i class="ai-twitter-fill"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- sp用ナビメニュー -->
+    <div id="navSp" class="nav-sp">
+      <ul>
+        <li><a href="hamburgermenu.html">ハンバーガーメニュー</a></li>
+        <li><a href="accordionmenu.html">アコーディオンメニュー</a></li>
+        <li><a href="modalwindow.html">モーダルウィンドウ</a></li>
+        <li><a href="tooltip.html">ツールチップ</a></li>
+        <li>
+          <a href="loadinganimation.html">ローディング<br />アニメーション</a>
+        </li>
+        <li>
+          <a href="cssanimation.html">その他のCSS<br />アニメーション</a>
+        </li>
+      </ul>
+    </div>
     <main>
-      <h2>ツールチップ</h2>
-      <div>
-        <h3>●title属性を使用</h3>
-        <a href="../index.html" title="別タブで開きます" target="_blank"
-          >ホームに戻る</a
-        >
-      </div>
-      <div>
-        <h3>●カスタムデータ属性を使用 ふわっと表示</h3>
-        <span class="tooltip" data-tooltip="吹き出しの形も自由に変えられます"
-          >ツールチップ実装</span
-        >
-      </div>
-      <div>
-        <h3>●テキストとツールチップを別要素で管理</h3>
-        <div class="tooltip1">
-          <p>テキスト</p>
-          <div class="description1">説明を入力してください。</div>
+      <section class="contents">
+        <div class="contents__title">
+          <img src="../img/dot-green.svg" />
+          <h2>ツールチップ</h2>
         </div>
+        <div class="contents__container">
+          <!-- TODO: title属性について調べてみる
+          読み上げ機能の対象ではないみたい-->
+          <!-- TODO: sp,tbでは確認できない旨を追記する
+          ２つ目と３つ目は長押しすれば確認できるが、別の要素をホバーしないと消せない -->
+          <div class="contents__item">
+            <h3>title属性を使用</h3>
+            <p class="tooltip-1" title="テキスト">テキスト</p>
+          </div>
+          <div class="contents__item">
+            <h3>下部に表示</h3>
+            <p class="tooltip-2" data-tooltip="テキスト">テキスト</p>
+          </div>
+          <div class="contents__item">
+            <h3>上部に表示</h3>
+            <div class="tooltip-3">
+              <p>テキスト</p>
+              <div class="description1">テキスト</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="back">
+        <a class="home-icon back__btn" href="../index.html"
+          ><i class="ai-home-alt1"></i
+        ></a>
       </div>
-
-      <a href="../index.html">ホームに戻る</a>
     </main>
-    <footer></footer>
-    <script src="../js/tooltip.js"></script>
+    <footer class="footer">
+      <ul>
+        <li>
+          <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
+            ><i class="ai-envelope"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="contact-icon"
+            href="https://twitter.com/panappi_02tk"
+            target="_blank"
+            ><i class="ai-twitter-fill"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../js/common.js"></script>
   </body>
 </html>

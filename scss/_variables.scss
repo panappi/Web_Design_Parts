@@ -1,0 +1,38 @@
+// 使用カラー
+$color-base: #f8f5e4;
+$color-main: #242e68;
+$color-accent: #539165;
+
+// ブレイクポイント
+$breakpoint-pc: 960px;
+$breakpoint-tb: 744px;
+
+// z-index
+$zindex-ham-mock-nav: 510;
+$zindex-ham-mock-blind: 520;
+$zindex-ham-mock-text: 530;
+$zindex-ham-mock-screen: 540;
+$zindex-ham-mock-header: 550;
+$zindex-nav: 900;
+$zindex-header: 1000;
+$zindex-loading: 1050;
+$zindex-grayout: 1100;
+$zindex-modal: 1200;
+
+// ハンバーガーメニューボタン
+// 全ページのheaderにて使用
+$nav_btn-size: 32px;
+$nav_btn_span-width: $nav_btn-size * 0.6;
+$nav_btn_span-height: 2px;
+$nav_btn_span-gap: 4px;
+// hamburegrmenuページにて使用
+// contents
+$button-size: 50px;
+$button_span-width: $button-size * 0.6;
+$button_span-height: 3px;
+$button_span-gap: 8px;
+// mockup
+$mu_btn-size: 24px;
+$mu_btn_span-width: $mu_btn-size * 0.6;
+$mu_btn_span-height: 1.6px;
+$mu_btn_span-gap: 3.6px;

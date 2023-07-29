@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Modal window</title>
+    <title>Loading animation</title>
     <link rel="stylesheet" href="../css/libs/reset.css" />
-    <link rel="stylesheet" href="../css/modalwindow.css" />
+    <link rel="stylesheet" href="../css/loadinganimation.css" />
     <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
-  <body id="body">
+  <body id="body" class="position-relative">
+    <!-- ローディング画面の白背景 -->
+    <div id="loadingBg" class="loading-bg"></div>
     <header class="header">
       <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
       <nav>
@@ -54,18 +56,24 @@
       <section class="contents">
         <div class="contents__title">
           <img src="../img/dot-green.svg" />
-          <h2>モーダルウィンドウ</h2>
+          <h2>ローディングアニメーション</h2>
         </div>
-        <p class="contents__text">
-          「ページを開くと表示されるモーダルウィンドウ」の動作確認ができます。<br />画面をリロードすると再表示されます。
-        </p>
-        <div id="windowModal_2" class="hide window-modal-2">
-          <p>※ウィンドウ外をクリックしても消えます</p>
-          <button id="btnCancel">キャンセル</button>
+
+        <div id="loading2" class="loading-2">
+          <div class="loading-2__percent"><span id="percent"></span>％</div>
+          <div id="gauge" class="loading-2__gauge"></div>
+        </div>
+
+        <div class="img-loading">
+          <p>読み込み用の画像です</p>
+          <img src="../img/spring.jpeg" alt="菜の花" />
+          <img src="../img/summer.jpeg" alt="海" />
+          <img src="../img/autumn.jpeg" alt="紅葉" />
+          <img src="../img/winter.jpg" alt="スキー場" />
         </div>
       </section>
       <div class="back">
-        <a class="arrow-icon back__btn" href="./modalwindow.html"
+        <a class="arrow-icon back__btn" href="./loadinganimation.html"
           ><i class="ai-arrow-back-thick"></i
         ></a>
         <a class="home-icon back__btn" href="../index.html"
@@ -90,8 +98,7 @@
         </li>
       </ul>
     </footer>
-    <div id="grayoutModal" class="hide grayout-modal"></div>
     <script src="../js/common.js"></script>
-    <script src="../js/modalwindow_2.js"></script>
+    <script src="../js/loadinganimation_2.js"></script>
   </body>
 </html>

@@ -7,20 +7,93 @@
     <title>CSS Animation</title>
     <link rel="stylesheet" href="../css/libs/reset.css" />
     <link rel="stylesheet" href="../css/cssanimation.css" />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
-  <body>
-    <header></header>
+  <body id="body">
+    <header class="header">
+      <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
+      <nav>
+        <!-- sp用ナビメニューのボタン -->
+        <button id="navBtn" class="header__nav-btn">
+          <span></span><span></span><span></span>
+        </button>
+        <!-- tb,pc用ナビメニュー -->
+        <ul id="navTb" class="header__nav-tb hide">
+          <li>
+            <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
+              ><i class="ai-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="contact-icon"
+              href="https://twitter.com/panappi_02tk"
+              target="_blank"
+              ><i class="ai-twitter-fill"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- sp用ナビメニュー -->
+    <div id="navSp" class="nav-sp">
+      <ul>
+        <li><a href="hamburgermenu.html">ハンバーガーメニュー</a></li>
+        <li><a href="accordionmenu.html">アコーディオンメニュー</a></li>
+        <li><a href="modalwindow.html">モーダルウィンドウ</a></li>
+        <li><a href="tooltip.html">ツールチップ</a></li>
+        <li>
+          <a href="loadinganimation.html">ローディング<br />アニメーション</a>
+        </li>
+        <li>
+          <a href="cssanimation.html">その他のCSS<br />アニメーション</a>
+        </li>
+      </ul>
+    </div>
     <main>
-      <h2>その他のCSSアニメーション</h2>
-      <div>
-        <h3>●テキスト</h3>
-        <div id="move-1" class="fontsize-24">hello</div>
-        <div id="move-2" class="fontsize-24"></div>
-        <div id="move-3" class="fontsize-24">hello</div>
+      <section class="contents">
+        <div class="contents__title">
+          <img src="../img/dot-green.svg" />
+          <h2>その他のCSSアニメーション</h2>
+        </div>
+        <div class="contents__container" ontouchstart="">
+          <div class="contents__item">
+            <h3>テキスト-1</h3>
+            <div class="cssanimation-text text-1">hello</div>
+          </div>
+          <div class="contents__item">
+            <h3>テキスト-2</h3>
+            <div class="cssanimation-text text-2">hello</div>
+          </div>
+          <div class="contents__item">
+            <h3>テキスト-3</h3>
+            <div class="cssanimation-text text-3"></div>
+          </div>
+        </div>
+      </section>
+      <div class="back">
+        <a class="home-icon back__btn" href="../index.html"
+          ><i class="ai-home-alt1"></i
+        ></a>
       </div>
-      <a href="../index.html">ホームに戻る</a>
     </main>
-    <footer></footer>
-    <!-- <script src="../js/cssanimation.js"></script> -->
+    <footer class="footer">
+      <ul>
+        <li>
+          <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
+            ><i class="ai-envelope"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="contact-icon"
+            href="https://twitter.com/panappi_02tk"
+            target="_blank"
+            ><i class="ai-twitter-fill"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../js/common.js"></script>
   </body>
 </html>

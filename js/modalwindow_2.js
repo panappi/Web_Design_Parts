@@ -1,20 +1,15 @@
 // リンクを押すと表示れるウィンドウ
-const link_login = document.getElementById("link_login");
-const window_login = document.getElementById("window_login");
-const window_login_cancel = document.getElementById("window_login_cancel");
-const grayout = document.getElementById("grayout");
-const body = document.getElementById("body");
+// const body = document.getElementById("body");  // common.jsで定義済み
+const grayoutModal = document.getElementById("grayoutModal");
+const windowModal_2 = document.getElementById("windowModal_2");
+const btnCancel = document.getElementById("btnCancel");
 const toggleModal = () => {
-  window_login.classList.toggle("hide");
-  grayout.classList.toggle("hide");
+  windowModal_2.classList.toggle("hide");
+  grayoutModal.classList.toggle("hide");
   body.classList.toggle("scroll-off");
 };
 
-// リンクが押されたらウィンドウとグレーアウトからhideクラスを削除する
-// link_login.addEventListener("click", () => toggleModal());
 window.addEventListener("load", () => toggleModal());
-
-// ウィンドウ内のキャンセルボタンが押されたら
-// ウィンドウとグレーアウトにhideクラスを追加する
-window_login_cancel.addEventListener("click", () => toggleModal());
-grayout.addEventListener("click", () => toggleModal());
+btnCancel.addEventListener("click", () => toggleModal());
+// ウィンドウ外をクリックしてもウィンドウを閉じる
+grayoutModal.addEventListener("click", () => toggleModal());
