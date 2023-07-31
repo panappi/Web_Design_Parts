@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/tooltip.css" />
     <script src="https://unpkg.com/akar-icons-fonts"></script>
   </head>
-  <body id="body">
+  <body id="body" ontouchstart="">
     <header class="header">
       <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
       <nav>
@@ -57,21 +57,21 @@
           <h2>ツールチップ</h2>
         </div>
         <div class="contents__container">
-          <!-- TODO: title属性について調べてみる
-          読み上げ機能の対象ではないみたい-->
           <!-- TODO: sp,tbでは確認できない旨を追記する
           ２つ目と３つ目は長押しすれば確認できるが、別の要素をホバーしないと消せない -->
           <div class="contents__item">
-            <h3>title属性を使用</h3>
+            <h3>title属性を使用<br />※PCのみ</h3>
             <p class="tooltip-1" title="テキスト">テキスト</p>
           </div>
           <div class="contents__item">
             <h3>下部に表示</h3>
-            <p class="tooltip-2" data-tooltip="テキスト">テキスト</p>
+            <p class="tooltip-2" data-tooltip="テキスト" ontouchstart="">
+              テキスト
+            </p>
           </div>
           <div class="contents__item">
             <h3>上部に表示</h3>
-            <div class="tooltip-3">
+            <div class="tooltip-3" ontouchstart="">
               <p>テキスト</p>
               <div class="description1">テキスト</div>
             </div>
