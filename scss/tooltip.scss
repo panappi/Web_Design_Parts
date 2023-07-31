@@ -71,12 +71,12 @@
     }
   }
   @media (hover: none) {
-    input:checked + &::before {
+    #tooltip_2:checked + &::before {
       opacity: 1;
       visibility: visible;
       top: 14px;
     }
-    input:checked + &::after {
+    #tooltip_2:checked + &::after {
       opacity: 1;
       visibility: visible;
       top: 34px;
