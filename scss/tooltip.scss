@@ -57,32 +57,6 @@
   &:hover::after {
     top: 34px;
   }
-  // @media (hover: hover) {
-  //   &:hover::before,
-  //   &:hover::after {
-  //     opacity: 1;
-  //     visibility: visible;
-  //   }
-  //   &:hover::before {
-  //     top: 14px;
-  //   }
-  //   &:hover::after {
-  //     top: 34px;
-  //   }
-  // }
-  // @media (hover: none) {
-  //   &:active::before,
-  //   &:active::after {
-  //     opacity: 1;
-  //     visibility: visible;
-  //   }
-  //   &:active::before {
-  //     top: 14px;
-  //   }
-  //   &:active::after {
-  //     top: 34px;
-  //   }
-  // }
 }
 
 // テキストとツールチップを別要素で管理

@@ -13,22 +13,22 @@
 // TODO: spではタップ中のみ変化するようにしたが微妙？
 .text-1 {
   color: $color-accent;
-  // &:hover {
-  //   animation: hop 1s;
-  //   color: $color-main;
+  &:hover {
+    animation: hop 1s;
+    color: $color-main;
+  }
+  // @media (hover: hover) {
+  //   &:hover {
+  //     animation: hop 1s;
+  //     color: $color-main;
+  //   }
   // }
-  @media (hover: hover) {
-    &:hover {
-      animation: hop 1s;
-      color: $color-main;
-    }
-  }
-  @media (hover: none) {
-    &:active {
-      animation: hop 1s;
-      color: $color-main;
-    }
-  }
+  // @media (hover: none) {
+  //   &:active {
+  //     animation: hop 1s;
+  //     color: $color-main;
+  //   }
+  // }
 }
 
 .text-2 {
@@ -46,28 +46,28 @@
     border-radius: 5px;
     transition: ease 0.4s;
   }
-  // &:hover {
-  //   color: $color-base;
-  //   &::after {
-  //     animation: liner 0.5s forwards;
+  &:hover {
+    color: $color-base;
+    &::after {
+      animation: liner 0.5s forwards;
+    }
+  }
+  // @media (hover: hover) {
+  //   &:hover {
+  //     color: $color-base;
+  //     &::after {
+  //       animation: liner 0.5s forwards;
+  //     }
   //   }
   // }
-  @media (hover: hover) {
-    &:hover {
-      color: $color-base;
-      &::after {
-        animation: liner 0.5s forwards;
-      }
-    }
-  }
-  @media (hover: none) {
-    &:active {
-      color: $color-base;
-      &::after {
-        animation: liner 0.5s forwards;
-      }
-    }
-  }
+  // @media (hover: none) {
+  //   &:active {
+  //     color: $color-base;
+  //     &::after {
+  //       animation: liner 0.5s forwards;
+  //     }
+  //   }
+  // }
 }
 
 .text-3 {
@@ -77,31 +77,31 @@
   &::before {
     content: "hello";
   }
-  // &:hover {
-  //   transform: rotateX(360deg);
-  //   background-color: $color-main;
-  //   &::before {
-  //     content: "bye";
+  &:hover {
+    transform: rotateX(360deg);
+    background-color: $color-main;
+    &::before {
+      content: "bye";
+    }
+  }
+  // @media (hover: hover) {
+  //   &:hover {
+  //     transform: rotateX(360deg);
+  //     background-color: $color-main;
+  //     &::before {
+  //       content: "bye";
+  //     }
   //   }
   // }
-  @media (hover: hover) {
-    &:hover {
-      transform: rotateX(360deg);
-      background-color: $color-main;
-      &::before {
-        content: "bye";
-      }
-    }
-  }
-  @media (hover: none) {
-    &:active {
-      transform: rotateX(360deg);
-      background-color: $color-main;
-      &::before {
-        content: "bye";
-      }
-    }
-  }
+  // @media (hover: none) {
+  //   &:active {
+  //     transform: rotateX(360deg);
+  //     background-color: $color-main;
+  //     &::before {
+  //       content: "bye";
+  //     }
+  //   }
+  // }
 }
 
 // アニメーション
