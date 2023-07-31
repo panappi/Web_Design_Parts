@@ -10,7 +10,7 @@
   cursor: pointer;
 }
 
-// TODO: spではタップすれば確認できるが、再タップでは元に戻らない
+// TODO: spではタップ中のみ変化するようにしたが微妙？
 .text-1 {
   color: $color-accent;
   // &:hover {

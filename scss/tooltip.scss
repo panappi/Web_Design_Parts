@@ -46,16 +46,41 @@
     z-index: 1;
   }
   /* マウスホバーしたときの設定 */
-  &:hover::before,
-  &:hover::after {
-    opacity: 1;
-    visibility: visible;
+  // &:hover::before,
+  // &:hover::after {
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
+  // &:hover::before {
+  //   top: 14px;
+  // }
+  // &:hover::after {
+  //   top: 34px;
+  // }
+  @media (hover: hover) {
+    &:hover::before,
+    &:hover::after {
+      opacity: 1;
+      visibility: visible;
+    }
+    &:hover::before {
+      top: 14px;
+    }
+    &:hover::after {
+      top: 34px;
+    }
   }
-  &:hover::before {
-    top: 14px;
-  }
-  &:hover::after {
-    top: 34px;
+  @media (hover: none) {
+    input:checked + &::before {
+      opacity: 1;
+      visibility: visible;
+      top: 14px;
+    }
+    input:checked + &::after {
+      opacity: 1;
+      visibility: visible;
+      top: 34px;
+    }
   }
 }
 
