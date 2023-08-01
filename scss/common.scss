@@ -167,14 +167,8 @@ button {
     font-size: 16px;
   }
   &__container {
-    // display: grid;
-    // grid-template-columns: repeat(2, 100px);
-    // grid-template-rows: repeat(3, 100px);
-    // justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    // TODO: 240px以下を考慮する必要ある？
-    // max-width: 100px * 2+40px * 1;
     width: 100px * 2+40px * 1;
     margin: 0 auto;
     gap: 40px;
@@ -195,7 +189,6 @@ button {
 
 @media screen and (min-width: $breakpoint-tb) {
   .contents__container {
-    // max-width: 140px * 3+40px * 2;
     width: 140px * 3+40px * 2;
     .contents__item {
       padding: 16px;
@@ -208,7 +201,6 @@ button {
 
 @media screen and (min-width: $breakpoint-pc) {
   .contents__container {
-    // max-width: 160px * 4+40px * 3;
     width: 160px * 4+40px * 3;
     .contents__item {
       padding: 24px;

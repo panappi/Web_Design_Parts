@@ -1,6 +1,11 @@
 @charset "utf-8";
 @use "common" as *;
 
+// common.scssから読み込み
+// .hide {
+//   display: none !important;
+// }
+
 .position-relative {
   position: relative;
 }
@@ -21,7 +26,6 @@
   position: fixed;
   left: 0;
   top: 0;
-  // display: none; // hideクラスで非表示にする
   width: 100%;
   height: 100vh;
   background: #fff;

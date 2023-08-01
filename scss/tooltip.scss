@@ -10,6 +10,7 @@
   cursor: pointer;
 }
 
+// 下部に表示
 // カスタムデータ属性を使用
 .tooltip-2 {
   position: relative;
@@ -18,7 +19,7 @@
   color: $color-base;
   border-radius: 3px;
   cursor: pointer;
-  /* ツールチップ全体の設定 */
+  // ツールチップ全体の設定
   &::before,
   &::after {
     position: absolute;
@@ -26,7 +27,7 @@
     visibility: hidden;
     transition: all 0.3s;
   }
-  /* 吹き出しのひげ部分 */
+  // 吹き出しのひげ部分
   &::before {
     content: "";
     border: 10px solid transparent;
@@ -34,7 +35,7 @@
     top: 4px;
     left: 37%;
   }
-  /* 吹き出しの本体 */
+  // 吹き出しの本体
   &::after {
     content: attr(data-tooltip);
     top: 24px;
@@ -45,7 +46,7 @@
     color: $color-base;
     z-index: 1;
   }
-  /* マウスホバーしたときの設定 */
+  // マウスホバーしたときの設定
   &:hover::before,
   &:hover::after {
     opacity: 1;
@@ -59,6 +60,7 @@
   }
 }
 
+// 上部に表示
 // テキストとツールチップを別要素で管理
 .tooltip-3 {
   position: relative;
