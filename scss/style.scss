@@ -23,6 +23,7 @@
   color: $color-base;
 }
 
+// TODO: pxをremに変更する？
 @media screen and (min-width: $breakpoint-tb) {
   .top {
     h1 {
