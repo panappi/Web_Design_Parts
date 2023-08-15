@@ -1,52 +1,6 @@
 @charset "utf-8";
 @use "common" as *;
 
-.contents__container-2 {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
-  gap: 40px;
-}
-
-.contents__item-2 {
-  display: grid;
-  place-items: center;
-  padding: 10px;
-  gap: 8px;
-  width: 240px;
-  height: auto;
-  font-size: 12px;
-  border-radius: 10px;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
-}
-
-@media screen and (min-width: $breakpoint-tb) {
-  .contents__container-2 {
-    flex-flow: row;
-    flex-wrap: wrap;
-    .contents__item-2 {
-      padding: 16px;
-      width: 360px;
-      font-size: 14px;
-    }
-  }
-}
-
-@media screen and (min-width: $breakpoint-pc) {
-  .contents__container-2 {
-    flex-flow: row;
-    flex-wrap: wrap;
-    .contents__item-2 {
-      padding: 24px;
-      width: 400px;
-      font-size: 16px;
-    }
-  }
-}
-
 // TODO: menu-1,menu-2の項目の縦幅を統一する
 
 // cssのみで実装
