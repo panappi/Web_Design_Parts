@@ -8,9 +8,9 @@
 $font-title: "Kiwi Maru", "ヒラギノ丸ゴ ProN", sans-serif;
 $font-text: "ヒラギノ丸ゴ ProN", sans-serif;
 
-// html {
-//   font-size: 62.5%;
-// }
+html {
+  font-size: 62.5%;
+}
 
 body {
   background-color: $color-base;
@@ -226,10 +226,11 @@ button {
 }
 
 .contents__item-2 {
-  display: grid;
+  // スライダー実装中のため一時コメントアウト
+  // display: grid;
   place-items: center;
   padding: 10px;
-  gap: 8px;
+  // gap: 8px;
   width: 240px;
   height: auto;
   font-size: 12px;
