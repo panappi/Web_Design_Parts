@@ -57,9 +57,9 @@
 .menu-2 {
   display: flex;
   flex-flow: column;
+  width: 216px;
   padding: 0;
   gap: 4px;
-  width: 216px;
   text-align: left;
   li {
     background-color: $color-accent;

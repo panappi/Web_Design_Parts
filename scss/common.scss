@@ -189,6 +189,33 @@ button {
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
     transition: 0.5s;
   }
+
+  &__container--large {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    // justify-content: center;
+    text-align: center;
+    width: 240px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  &__item--large {
+    display: grid;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    width: 240px;
+    height: auto;
+    font-size: 12px;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// TODO: contents__item--largeで指定するか要検討
+.horizon-center {
+  justify-content: center;
 }
 
 @media screen and (min-width: $breakpoint-tb) {
@@ -202,7 +229,6 @@ button {
     }
   }
 }
-
 @media screen and (min-width: $breakpoint-pc) {
   .contents__container {
     width: 160px * 4+40px * 3;
@@ -214,43 +240,24 @@ button {
     }
   }
 }
-
-.contents__container-2 {
-  display: flex;
-  flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
-  gap: 40px;
-}
-
-.contents__item-2 {
-  // スライダー実装中のため一時コメントアウト
-  // display: grid;
-  place-items: center;
-  padding: 10px;
-  // gap: 8px;
-  width: 240px;
-  height: auto;
-  font-size: 12px;
-  border-radius: 10px;
-  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
-}
-
 @media screen and (min-width: $breakpoint-tb) {
-  .contents__item-2 {
-    padding: 16px;
-    width: 360px;
-    font-size: 14px;
+  .contents__container--large {
+    width: 250px * 2+40px * 1;
+    .contents__item--large {
+      padding: 16px;
+      width: 250px;
+      font-size: 14px;
+    }
   }
 }
-
 @media screen and (min-width: $breakpoint-pc) {
-  .contents__item-2 {
-    padding: 24px;
-    width: 400px;
-    font-size: 16px;
+  .contents__container--large {
+    width: 360px * 2+40px * 1;
+    .contents__item--large {
+      padding: 24px;
+      width: 360px;
+      font-size: 16px;
+    }
   }
 }
 

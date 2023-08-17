@@ -127,11 +127,11 @@
 //   font-family: "Lato", sans-serif;
 // }
 
-* {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
-  scrollbar-width: 0px;
-}
+// * {
+//   box-sizing: border-box;
+//   scrollbar-color: transparent transparent; /* thumb and track color */
+//   scrollbar-width: 0px;
+// }
 
 // *::-webkit-scrollbar {
 //   width: 0;
@@ -150,12 +150,12 @@
 //   -ms-overflow-style: none;
 // }
 
-ol,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+// ol,
+// li {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+// }
 
 .carousel {
   position: relative;
@@ -181,12 +181,16 @@ li {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  background-color: #f99;
+  background-color: $color-accent;
+  border-radius: 10px;
+  color: #fff;
   counter-increment: item;
 }
 
 .carousel__slide:nth-child(even) {
-  background-color: #99f;
+  background-color: #fff;
+  border: solid 2px $color-accent;
+  color: $color-main;
 }
 
 .carousel__slide:before {
@@ -195,7 +199,6 @@ li {
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -40%, 70px);
-  color: #fff;
   font-size: 2em;
 }
 
@@ -249,7 +252,7 @@ li {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #333;
+  background-color: $color-main;
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
@@ -286,7 +289,7 @@ li {
 .carousel::after {
   content: "";
   z-index: 1;
-  background-color: #333;
+  background-color: $color-main;
   background-size: 1.5rem 1.5rem;
   background-repeat: no-repeat;
   background-position: center center;
