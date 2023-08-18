@@ -19,7 +19,7 @@ body {
 }
 
 main {
-  padding: 4%;
+  padding: 4% 4% 8%;
 }
 
 button {
@@ -264,6 +264,7 @@ button {
 .back {
   display: flex;
   justify-content: flex-end;
+  padding: 0 4% 4%;
   gap: 20px;
   &__btn {
     display: flex;
