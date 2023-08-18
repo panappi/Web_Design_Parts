@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <link rel="stylesheet" href="../css/libs/reset.css" />
+    <link rel="stylesheet" href="../css/slider.css" />
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+  </head>
+  <body id="body">
+    <header class="header">
+      <a class="rogo" href="../index.html">Webデザイン<br />パーツ集</a>
+      <nav>
+        <!-- sp用ナビメニューのボタン -->
+        <button id="navBtn" class="header__nav-btn">
+          <span></span><span></span><span></span>
+        </button>
+        <!-- tb,pc用ナビメニュー -->
+        <ul id="navTb" class="header__nav-tb hide">
+          <!-- <li>
+            <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
+              ><i class="ai-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              class="contact-icon"
+              href="https://twitter.com/panappi_02tk"
+              target="_blank"
+              ><i class="ai-twitter-fill"></i
+            ></a>
+          </li> -->
+        </ul>
+      </nav>
+    </header>
+    <!-- sp用ナビメニュー -->
+    <div id="navSp" class="nav-sp">
+      <ul>
+        <li><a href="hamburgermenu.html">ハンバーガーメニュー</a></li>
+        <li><a href="accordionmenu.html">アコーディオンメニュー</a></li>
+        <li><a href="modalwindow.html">モーダルウィンドウ</a></li>
+        <li><a href="tooltip.html">ツールチップ</a></li>
+        <li><a href="slider.html">スライダー</a></li>
+        <li>
+          <a href="loadinganimation.html">ローディング<br />アニメーション</a>
+        </li>
+        <li>
+          <a href="cssanimation.html">その他のCSS<br />アニメーション</a>
+        </li>
+      </ul>
+    </div>
+    <main>
+      <section class="contents">
+        <div class="contents__title">
+          <img src="../img/dot-green.svg" />
+          <h2>スライダー</h2>
+        </div>
+        <div class="contents__container--large">
+          <div class="contents__item--large horizon-center">
+            <h3>スワイプまたはボタンで<br />表示する画像を変更</h3>
+            <div class="slider-1">
+              <div class="slider-1__slides">
+                <div id="slider-1__slide1">1</div>
+                <div id="slider-1__slide2">2</div>
+                <div id="slider-1__slide3">3</div>
+                <div id="slider-1__slide4">4</div>
+                <div id="slider-1__slide5">5</div>
+              </div>
+              <a href="#slider-1__slide1">1</a>
+              <a href="#slider-1__slide2">2</a>
+              <a href="#slider-1__slide3">3</a>
+              <a href="#slider-1__slide4">4</a>
+              <a href="#slider-1__slide5">5</a>
+            </div>
+          </div>
+          <div class="contents__item--large">
+            <h3>
+              スワイプまたはボタンで<br />表示する画像を変更<br />(※PCのみ自動再生)
+            </h3>
+            <section class="slider-2" aria-label="Gallery">
+              <ol class="slider-2__viewport">
+                <li id="slider-2__slide1" tabindex="0" class="slider-2__slide">
+                  <div class="slider-2__snapper">
+                    <a href="#slider-2__slide4" class="slider-2__prev"
+                      >Go to last slide</a
+                    >
+                    <a href="#slider-2__slide2" class="slider-2__next"
+                      >Go to next slide</a
+                    >
+                  </div>
+                </li>
+                <li id="slider-2__slide2" tabindex="0" class="slider-2__slide">
+                  <div class="slider-2__snapper"></div>
+                  <a href="#slider-2__slide1" class="slider-2__prev"
+                    >Go to previous slide</a
+                  >
+                  <a href="#slider-2__slide3" class="slider-2__next"
+                    >Go to next slide</a
+                  >
+                </li>
+                <li id="slider-2__slide3" tabindex="0" class="slider-2__slide">
+                  <div class="slider-2__snapper"></div>
+                  <a href="#slider-2__slide2" class="slider-2__prev"
+                    >Go to previous slide</a
+                  >
+                  <a href="#slider-2__slide4" class="slider-2__next"
+                    >Go to next slide</a
+                  >
+                </li>
+                <li id="slider-2__slide4" tabindex="0" class="slider-2__slide">
+                  <div class="slider-2__snapper"></div>
+                  <a href="#slider-2__slide3" class="slider-2__prev"
+                    >Go to previous slide</a
+                  >
+                  <a href="#slider-2__slide1" class="slider-2__next"
+                    >Go to first slide</a
+                  >
+                </li>
+              </ol>
+              <aside class="slider-2__navigation">
+                <ol class="slider-2__navigation-list">
+                  <li class="slider-2__navigation-item">
+                    <a
+                      href="#slider-2__slide1"
+                      class="slider-2__navigation-button"
+                      >Go to slide 1</a
+                    >
+                  </li>
+                  <li class="slider-2__navigation-item">
+                    <a
+                      href="#slider-2__slide2"
+                      class="slider-2__navigation-button"
+                      >Go to slide 2</a
+                    >
+                  </li>
+                  <li class="slider-2__navigation-item">
+                    <a
+                      href="#slider-2__slide3"
+                      class="slider-2__navigation-button"
+                      >Go to slide 3</a
+                    >
+                  </li>
+                  <li class="slider-2__navigation-item">
+                    <a
+                      href="#slider-2__slide4"
+                      class="slider-2__navigation-button"
+                      >Go to slide 4</a
+                    >
+                  </li>
+                </ol>
+              </aside>
+            </section>
+          </div>
+        </div>
+      </section>
+      <div class="back">
+        <a class="home-icon back__btn" href="../index.html"
+          ><i class="ai-home-alt1"></i
+        ></a>
+      </div>
+    </main>
+    <footer class="footer">
+      <ul>
+        <li>Portfolio by panappi</li>
+        <!-- <li>
+          <a class="contact-icon" href="mailto:date02tk&#64;gmail.com"
+            ><i class="ai-envelope"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="contact-icon"
+            href="https://twitter.com/panappi_02tk"
+            target="_blank"
+            ><i class="ai-twitter-fill"></i
+          ></a>
+        </li> -->
+      </ul>
+    </footer>
+    <script src="../js/common.js"></script>
+  </body>
+</html>

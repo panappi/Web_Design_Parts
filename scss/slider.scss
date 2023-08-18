@@ -1,0 +1,233 @@
+@charset "utf-8";
+@use "common" as *;
+
+// スライダー1
+.slider-1 {
+  width: 240px;
+  padding: 10px 10px 0;
+  text-align: center;
+  overflow: hidden;
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    margin: 8px 4px 0;
+    background-color: $color-accent;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    &:active {
+      transform: scale(0.8);
+    }
+  }
+  &__slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 48px;
+    filter: drop-shadow(0 0 4px #0003);
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 220px;
+      height: 220px;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      border: solid 2px $color-accent;
+      border-radius: 10px;
+      background: #fff;
+      font-size: 2em;
+    }
+  }
+}
+
+// スライダー2
+.slider-2 {
+  position: relative;
+  padding-top: 75%;
+  filter: drop-shadow(0 0 4px #0003);
+  perspective: 100px;
+
+  &__viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+
+  &__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    background-color: $color-accent;
+    border-radius: 10px;
+    color: #fff;
+    counter-increment: item;
+    &:nth-child(even) {
+      background-color: #fff;
+      border: solid 2px $color-accent;
+      color: $color-main;
+    }
+    &:before {
+      content: counter(item);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -40%, 70px);
+      font-size: 2em;
+    }
+  }
+
+  &__snapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    scroll-snap-align: center;
+  }
+
+  &__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    &-button {
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: $color-main;
+      background-clip: content-box;
+      border: 0.25rem solid transparent;
+      border-radius: 50%;
+      font-size: 0;
+      transition: transform 0.1s;
+    }
+    &-list,
+    &-item {
+      display: inline-block;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    z-index: 1;
+    background-color: $color-main;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    pointer-events: none;
+  }
+  &::before {
+    background-image: url(../img/arrow-triangle.svg);
+  }
+  &::after {
+    background-image: url(../img/arrow-triangle.svg);
+  }
+
+  &::before,
+  &::after,
+  &__prev,
+  &__next {
+    position: absolute;
+    top: 0;
+    margin-top: 37.5%;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+  }
+  &::before,
+  &__prev {
+    left: -1rem;
+    transform: translateY(-50%);
+  }
+  &::after,
+  &__next {
+    right: -1rem;
+    transform: translateY(-50%) scaleX(-1);
+  }
+}
+
+// TODO: スマホでも自動再生可能にする
+@media (hover: hover) {
+  .slider-2__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  .slider-2__slide:last-child .slider-2__snapper {
+    animation-name: tostart, snap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slider-2__snapper {
+    animation-name: none;
+  }
+}
+
+.slider-2:hover .slider-2__snapper,
+.slider-2:focus-within .slider-2__snapper {
+  animation-name: none;
+}
+
+// アニメーション
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes tostart {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
