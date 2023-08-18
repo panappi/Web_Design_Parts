@@ -162,18 +162,18 @@
   }
 }
 
-// TODO: スマホでも自動再生？
-// @media (hover: hover) {
-.slider-2__snapper {
-  animation-name: tonext, snap;
-  animation-timing-function: ease;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+// TODO: スマホでも自動再生可能にする
+@media (hover: hover) {
+  .slider-2__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  .slider-2__slide:last-child .slider-2__snapper {
+    animation-name: tostart, snap;
+  }
 }
-.slider-2__slide:last-child .slider-2__snapper {
-  animation-name: tostart, snap;
-}
-// }
 
 @media (prefers-reduced-motion: reduce) {
   .slider-2__snapper {
