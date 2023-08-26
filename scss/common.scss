@@ -156,19 +156,13 @@ button {
   &__title {
     display: flex;
     padding: 0 4%;
-    // gap: 8px;
+    gap: 8px;
     align-items: center;
-    // img {
-    //   width: 20px;
-    //   height: 20px;
-    // }
-    // h2 {
     font-size: 18px;
     span {
       font-size: 20px;
       color: $color-accent;
     }
-    // }
   }
   &__text {
     padding: 0 8%;
