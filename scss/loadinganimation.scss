@@ -67,32 +67,41 @@
   }
   &__dots {
     display: flex;
-    gap: 4px;
-    img {
+    gap: 6px;
+    span {
       width: 20px;
       height: 20px;
+      background-color: $color-accent1;
+      border-radius: 50%;
+      &:nth-child(2),
+      &:nth-child(5) {
+        background-color: $color-accent2;
+      }
+      &:nth-child(3n) {
+        background-color: $color-accent3;
+      }
     }
   }
   // ローディング画面
   &.active {
     display: flex;
     animation: appear 1s ease;
-    img:nth-of-type(1) {
+    span:nth-of-type(1) {
       animation: jump 2s infinite;
     }
-    img:nth-of-type(2) {
+    span:nth-of-type(2) {
       animation: jump 2s infinite 0.33s;
     }
-    img:nth-of-type(3) {
+    span:nth-of-type(3) {
       animation: jump 2s infinite 0.66s;
     }
-    img:nth-of-type(4) {
+    span:nth-of-type(4) {
       animation: jump 2s infinite 0.99s;
     }
-    img:nth-of-type(5) {
+    span:nth-of-type(5) {
       animation: jump 2s infinite 1.32s;
     }
-    img:nth-of-type(6) {
+    span:nth-of-type(6) {
       animation: jump 2s infinite 1.65s;
     }
   }
