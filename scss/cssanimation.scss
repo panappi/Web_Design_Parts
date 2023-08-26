@@ -11,7 +11,7 @@
 }
 
 .text-1 {
-  color: $color-accent;
+  color: $color-accent1;
   &:hover {
     animation: hop 1s;
     color: $color-main;
@@ -20,7 +20,7 @@
 
 .text-2 {
   position: relative;
-  color: $color-accent;
+  color: $color-accent1;
   &::after {
     content: "";
     position: absolute;
@@ -43,7 +43,7 @@
 
 .text-3 {
   color: $color-base;
-  background-color: $color-accent;
+  background-color: $color-accent1;
   border-radius: 5px;
   &::before {
     content: "hello";

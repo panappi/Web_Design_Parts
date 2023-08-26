@@ -12,7 +12,7 @@
   position: relative;
   width: $button-size;
   height: $button-size;
-  background-color: $color-accent;
+  background-color: $color-accent1;
   border-radius: $button-size * 0.1;
 }
 
@@ -287,11 +287,21 @@
           display: flex;
           flex-flow: column;
           font-size: 11px;
-          .dot-line-l {
-            width: 100px;
-          }
-          .dot-line-s {
-            width: 16px;
+          .dot-line {
+            display: flex;
+            gap: 3px;
+            span {
+              width: 4px;
+              height: 4px;
+              background-color: $color-accent1;
+              border-radius: 50%;
+              &:nth-child(2n) {
+                background-color: $color-accent2;
+              }
+              &:nth-child(3n) {
+                background-color: $color-accent3;
+              }
+            }
           }
         }
       }

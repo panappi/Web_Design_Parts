@@ -18,7 +18,7 @@
   height: 32px;
   font-size: 20px;
   color: $color-base;
-  background-color: $color-accent;
+  background-color: $color-accent1;
   border-radius: 32px * 0.5;
 }
 
@@ -59,7 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: $color-accent;
+    background: $color-accent1;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     color: $color-base;
@@ -149,7 +149,7 @@
   &__gauge {
     width: 0px;
     height: 5px;
-    background: $color-accent;
+    background: $color-accent1;
   }
 }
 .img-loading {
