@@ -14,7 +14,7 @@
     width: 18px;
     height: 18px;
     margin: 8px 4px 0;
-    background-color: $color-accent;
+    background-color: $color-accent1;
     border-radius: 50%;
     font-size: 12px;
     color: #fff;
@@ -37,7 +37,7 @@
       height: 220px;
       scroll-snap-align: start;
       flex-shrink: 0;
-      border: solid 2px $color-accent;
+      border: solid 2px $color-accent1;
       border-radius: 10px;
       background: #fff;
       font-size: 2em;
@@ -69,13 +69,13 @@
     position: relative;
     flex: 0 0 100%;
     width: 100%;
-    background-color: $color-accent;
+    background-color: $color-accent1;
     border-radius: 10px;
     color: #fff;
     counter-increment: item;
     &:nth-child(even) {
       background-color: #fff;
-      border: solid 2px $color-accent;
+      border: solid 2px $color-accent1;
       color: $color-main;
     }
     &:before {
